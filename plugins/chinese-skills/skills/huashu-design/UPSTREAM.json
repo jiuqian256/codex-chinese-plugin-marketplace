@@ -1,0 +1,13 @@
+{
+  "name": "huashu-design",
+  "upstream_skill_name": "huashu-design",
+  "repository": "alchaincyf/huashu-design",
+  "commit": "3bd465d7ad29ffcb284113beb48910b469f00797",
+  "path": ".",
+  "license": "MIT",
+  "adaptations": [
+    "中文名称和调用示例",
+    "可移植路径和 Codex 入口适配"
+  ],
+  "upstream_skill_sha256": "37c69d0e80662284a378eb46d9d142cac004d4bf8117d7f79495377bd7279b30"
+}

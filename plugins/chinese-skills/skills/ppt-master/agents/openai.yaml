@@ -1,0 +1,4 @@
+interface:
+  display_name: "PPT Master 原生幻灯片制作"
+  short_description: "从文档或主题制作原生可编辑 PPTX，支持模板继承、图表、动画与讲稿。"
+  default_prompt: "使用 $chinese-skills:ppt-master 将这份文档制作成原生可编辑的 PowerPoint。"

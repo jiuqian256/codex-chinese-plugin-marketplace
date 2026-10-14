@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>html-ppt-studio 基础样例</title>
+  <style>
+    :root {
+      --bg: #05070b;
+      --panel: rgba(255, 255, 255, .075);
+      --line: rgba(255, 255, 255, .16);
+      --ink: #f7fafc;
+      --muted: rgba(247, 250, 252, .64);
+      --blue: #4f8cff;
+      --orange: #ff8a3d;
+      --green: #43d39e;
+    }
+    * { box-sizing: border-box; }
+    html, body { width: 100%; height: 100%; margin: 0; overflow: hidden; background: var(--bg); color: var(--ink); }
+    body { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    button { font: inherit; }
+    .viewport { position: fixed; inset: 0; overflow: hidden; background: radial-gradient(circle at 16% 8%, rgba(79, 140, 255, .22), transparent 30%), radial-gradient(circle at 86% 76%, rgba(255, 138, 61, .14), transparent 26%), #05070b; }
+    .stage {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 1920px;
+      height: 1080px;
+      overflow: hidden;
+      transform-origin: 0 0;
+      background: #070b12;
+      border: 1px solid rgba(255, 255, 255, .08);
+    }
+    .stage::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+      background-image: linear-gradient(90deg, rgba(255,255,255,.055) 1px, transparent 1px), linear-gradient(0deg, rgba(255,255,255,.055) 1px, transparent 1px);
+      background-size: 80px 80px;
+      mask-image: linear-gradient(180deg, black, rgba(0,0,0,.72));
+    }
+    .slide {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      grid-template-columns: 1fr 520px;
+      gap: 70px;
+      padding: 96px 108px 84px;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transform: translateY(12px);
+      transition: opacity .28s ease, transform .32s ease;
+    }
+    .slide.active { opacity: 1; visibility: visible; pointer-events: auto; transform: translateY(0); z-index: 2; }
+    .content, .side { position: relative; z-index: 3; }
+    .eyebrow { color: var(--green); font: 800 22px/1.2 ui-monospace, SFMono-Regular, Menlo, monospace; text-transform: uppercase; letter-spacing: .08em; margin-bottom: 48px; }
+    h1 { margin: 0; max-width: 1060px; font-size: 112px; line-height: .95; letter-spacing: 0; }
+    h2 { margin: 0; max-width: 1040px; font-size: 82px; line-height: 1; letter-spacing: 0; }
+    p { max-width: 980px; margin: 34px 0 0; color: var(--muted); font-size: 34px; line-height: 1.35; }
+    .cards { display: grid; gap: 18px; margin-top: 54px; max-width: 1000px; }
+    .card { padding: 24px 28px; border: 1px solid var(--line); border-radius: 8px; background: var(--panel); box-shadow: 0 24px 80px rgba(0,0,0,.22); }
+    .card strong { display: block; margin-bottom: 8px; font-size: 24px; }
+    .card span { color: var(--muted); font-size: 22px; line-height: 1.35; }
+    .metric { min-height: 250px; padding: 34px; border: 1px solid var(--line); border-radius: 8px; background: linear-gradient(180deg, rgba(255,255,255,.11), rgba(255,255,255,.045)); }
+    .metric + .metric { margin-top: 22px; }
+    .metric b { display: block; color: var(--orange); font-size: 72px; line-height: .9; }
+    .metric span { display: block; margin-top: 18px; color: var(--muted); font-size: 23px; line-height: 1.35; }
+    .page { position: absolute; right: 70px; bottom: 48px; z-index: 4; color: rgba(247,250,252,.5); font: 800 18px ui-monospace, SFMono-Regular, Menlo, monospace; }
+    .toolbar {
+      position: fixed;
+      left: 50%;
+      bottom: 18px;
+      z-index: 10;
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      transform: translateX(-50%);
+      padding: 8px;
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: 999px;
+      background: rgba(5,7,11,.74);
+      backdrop-filter: blur(18px);
+    }
+    .toolbar button {
+      height: 34px;
+      min-width: 42px;
+      padding: 0 14px;
+      border: 0;
+      border-radius: 999px;
+      color: var(--ink);
+      background: rgba(255,255,255,.12);
+      cursor: pointer;
+    }
+    .toolbar button.active { background: var(--blue); }
+    .status {
+      position: fixed;
+      left: 20px;
+      bottom: 22px;
+      z-index: 11;
+      color: var(--muted);
+      font: 700 13px ui-monospace, SFMono-Regular, Menlo, monospace;
+    }
+    .notes {
+      position: fixed;
+      right: 18px;
+      top: 18px;
+      z-index: 12;
+      display: none;
+      width: 360px;
+      padding: 16px;
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: 8px;
+      background: rgba(5,7,11,.82);
+      backdrop-filter: blur(18px);
+    }
+    .notes textarea {
+      width: 100%;
+      height: 150px;
+      resize: vertical;
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: 8px;
+      padding: 12px;
+      background: rgba(255,255,255,.08);
+      color: var(--ink);
+      font: 15px/1.4 ui-sans-serif, system-ui;
+    }
+    .presenter-mode .notes { display: block; }
+    .audience-mode .toolbar, .audience-mode .notes, .audience-mode .status, .pdf-export .toolbar, .pdf-export .notes, .pdf-export .status { display: none; }
+    .fullscreen { position: fixed; right: 18px; bottom: 18px; z-index: 20; display: none; padding: 10px 14px; border: 0; border-radius: 999px; color: var(--ink); background: var(--blue); }
+    .audience-mode .fullscreen { display: block; }
+    .pdf-export .fullscreen { display: none; }
+    [contenteditable="true"] { outline: 2px solid rgba(79, 140, 255, .6); outline-offset: 4px; border-radius: 4px; }
+    @media (prefers-reduced-motion: reduce) {
+      * { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="viewport">
+    <main class="stage" id="stage">
+      <section class="slide active" data-slide-id="slide-1">
+        <div class="content">
+          <div class="eyebrow">html-ppt-studio</div>
+          <h1 data-edit-id="slide-1-title">像传统 PPT 一样编辑和演示 HTML 内容。</h1>
+          <p data-edit-id="slide-1-copy">把网页、图片页、PPT 截图或 Agent 生成页面，变成可翻页、可演示、可保存编辑状态的 HTML Deck。</p>
+          <div class="cards">
+            <div class="card"><strong>可移植 skill</strong><span>Codex、Hermes、Claude Code、Cursor、OpenCode 或其他文件型 Agent 都可以读取同一套规则。</span></div>
+            <div class="card"><strong>运行时优先</strong><span>演示和手动小改动可以在浏览器里完成，不必每次都调用模型。</span></div>
+          </div>
+        </div>
+        <aside class="side">
+          <div class="metric"><b>16:9</b><span>固定舞台，方便预览、截图和导出 PDF。</span></div>
+          <div class="metric"><b>3</b><span>三种模式：极速初稿、正式演示、完整编辑。</span></div>
+        </aside>
+        <div class="page">01 / 03</div>
+      </section>
+
+      <section class="slide" data-slide-id="slide-2">
+        <div class="content">
+          <div class="eyebrow">运行时契约</div>
+          <h2 data-edit-id="slide-2-title">把内容、运行时、服务和模型分开。</h2>
+          <p data-edit-id="slide-2-copy">Deck 应该能在浏览器里直接观看。本地服务负责保存和导出，模型主要用于生成和复杂修改。</p>
+          <div class="cards">
+            <div class="card"><strong>内容层</strong><span>页面、图表、图片、版式和要传达的信息。</span></div>
+            <div class="card"><strong>运行时层</strong><span>导航、演示者视图、观众窗口、页面状态和编辑入口。</span></div>
+            <div class="card"><strong>本地服务</strong><span>写入状态文件，并可选导出截图式 PDF。</span></div>
+          </div>
+        </div>
+        <aside class="side">
+          <div class="metric"><b>0</b><span>观看静态发布版不需要 API key。</span></div>
+          <div class="metric"><b>1</b><span>用于投屏的干净观众窗口。</span></div>
+        </aside>
+        <div class="page">02 / 03</div>
+      </section>
+
+      <section class="slide" data-slide-id="slide-3">
+        <div class="content">
+          <div class="eyebrow">编辑契约</div>
+          <h2 data-edit-id="slide-3-title">网页手动编辑必须保存成真实状态。</h2>
+          <p data-edit-id="slide-3-copy">只改 DOM 不算保存。下一次 Agent 修改 Deck 前，应该先读取保存后的状态文件。</p>
+          <div class="cards">
+            <div class="card"><strong>点击编辑</strong><span>页面文字进入浏览器可编辑状态。</span></div>
+            <div class="card"><strong>点击保存</strong><span>Deck 会把页面顺序、文字、备注和改动页提交给本地服务。</span></div>
+            <div class="card"><strong>先读状态</strong><span>后续改稿应从 `deck-state.json` 开始，而不是依赖旧 HTML 猜测。</span></div>
+          </div>
+        </div>
+        <aside class="side">
+          <div class="metric"><b>JSON</b><span>Agent 易读取的简单状态格式。</span></div>
+          <div class="metric"><b>PDF</b><span>通过模板服务可选导出截图式 PDF。</span></div>
+        </aside>
+        <div class="page">03 / 03</div>
+      </section>
+    </main>
+  </div>
+
+  <div class="toolbar">
+    <button id="prevBtn">上一页</button>
+    <button id="nextBtn">下一页</button>
+    <button id="presentBtn">演示</button>
+    <button id="editBtn">编辑</button>
+    <button id="timerBtn">暂停计时</button>
+    <button id="saveBtn">保存</button>
+    <button id="pdfBtn">PDF</button>
+  </div>
+  <button class="fullscreen" id="fullscreenBtn">进入全屏</button>
+  <div class="status" id="status">1 / 3</div>
+  <div class="notes">
+    <strong>演讲备注</strong>
+    <div id="timer">用时 00:00</div>
+    <textarea id="notesBox"></textarea>
+  </div>
+
+  <script>
+    const deckId = 'basic-deck';
+    const slides = Array.from(document.querySelectorAll('.slide'));
+    const editable = Array.from(document.querySelectorAll('[data-edit-id]'));
+    const status = document.getElementById('status');
+    const notesBox = document.getElementById('notesBox');
+    const timer = document.getElementById('timer');
+    const timerBtn = document.getElementById('timerBtn');
+    const channel = 'BroadcastChannel' in window ? new BroadcastChannel(`html-ppt-studio:${deckId}`) : null;
+    const params = new URLSearchParams(location.search);
+    let elapsedBeforePause = 0;
+    let timerStartedAt = Date.now();
+    let timerRunning = true;
+    let notes = {
+      'slide-1': '介绍用途：像传统 PPT 一样编辑和演示 HTML 内容。',
+      'slide-2': '说明内容、运行时、本地服务和模型层为什么要分开。',
+      'slide-3': '强调网页手动编辑必须保存成可读取的状态文件。'
+    };
+    let current = Math.max(0, Math.min(Number(params.get('slide') || 1) - 1, slides.length - 1));
+    let editMode = false;
+    let audienceWindow = null;
+    let notesSaveTimer = null;
+
+    if (params.get('mode') === 'audience') document.body.classList.add('audience-mode');
+    if (params.get('export') === 'pdf') document.body.classList.add('pdf-export');
+
+    function slideId(index) {
+      return slides[index]?.dataset.slideId || `slide-${index + 1}`;
+    }
+
+    function setStatus(message) {
+      status.textContent = message;
+    }
+
+    function show(index, broadcast = true) {
+      current = Math.max(0, Math.min(index, slides.length - 1));
+      slides.forEach((slide, i) => slide.classList.toggle('active', i === current));
+      notesBox.value = notes[slideId(current)] || '';
+      setStatus(`${current + 1} / ${slides.length}`);
+      history.replaceState(null, '', `${location.pathname}?${new URLSearchParams({ ...Object.fromEntries(params), slide: String(current + 1) })}`);
+      if (broadcast) {
+        channel?.postMessage({ type: 'show', index: current });
+        audienceWindow?.postMessage({ type: 'show', index: current }, '*');
+      }
+    }
+
+    window.show = show;
+
+    function next() { show(current + 1); }
+    function prev() { show(current - 1); }
+
+    function scaleStage() {
+      const stage = document.getElementById('stage');
+      const box = document.querySelector('.viewport').getBoundingClientRect();
+      const scale = Math.min(box.width / 1920, box.height / 1080);
+      stage.style.transform = `translate(${(box.width - 1920 * scale) / 2}px, ${(box.height - 1080 * scale) / 2}px) scale(${scale})`;
+    }
+
+    function updateTimer() {
+      const elapsedMs = elapsedBeforePause + (timerRunning ? Date.now() - timerStartedAt : 0);
+      const elapsed = Math.floor(elapsedMs / 1000);
+      const minutes = String(Math.floor(elapsed / 60)).padStart(2, '0');
+      const seconds = String(elapsed % 60).padStart(2, '0');
+      timer.textContent = `用时 ${minutes}:${seconds}`;
+    }
+
+    function toggleTimer() {
+      if (timerRunning) {
+        elapsedBeforePause += Date.now() - timerStartedAt;
+        timerRunning = false;
+        timerBtn.textContent = '继续计时';
+        setStatus('计时已暂停');
+      } else {
+        timerStartedAt = Date.now();
+        timerRunning = true;
+        timerBtn.textContent = '暂停计时';
+        setStatus('计时已继续');
+      }
+      updateTimer();
+    }
+
+    function toggleEdit() {
+      editMode = !editMode;
+      editable.forEach(node => node.contentEditable = editMode ? 'true' : 'false');
+      document.getElementById('editBtn').classList.toggle('active', editMode);
+      setStatus(editMode ? '已进入编辑模式' : `${current + 1} / ${slides.length}`);
+    }
+
+    async function loadPersistedState() {
+      try {
+        const response = await fetch('/api/state', { cache: 'no-store' });
+        if (!response.ok) return;
+        const state = await response.json();
+        if (state.notes && typeof state.notes === 'object') {
+          notes = { ...notes, ...state.notes };
+        }
+        if (state.text && typeof state.text === 'object') {
+          editable.forEach(node => {
+            if (Object.prototype.hasOwnProperty.call(state.text, node.dataset.editId)) {
+              node.innerText = state.text[node.dataset.editId];
+            }
+          });
+        }
+      } catch (_) {
+        // Static file viewing is still supported; durable save requires the local service.
+      }
+    }
+
+    function collectState() {
+      notes[slideId(current)] = notesBox.value;
+      const text = {};
+      editable.forEach(node => {
+        text[node.dataset.editId] = node.innerText;
+      });
+      return {
+        deckId,
+        revision: 0,
+        totalSlides: slides.length,
+        slideOrder: slides.map((slide, index) => ({
+          slideId: slide.dataset.slideId,
+          index,
+          title: slide.querySelector('h1,h2')?.innerText || `第 ${index + 1} 页`
+        })),
+        dirtySlides: slides.map(slide => slide.dataset.slideId),
+        text,
+        notes
+      };
+    }
+
+    async function saveState(options = {}) {
+      if (!options.quiet) setStatus('正在保存...');
+      try {
+        const state = collectState();
+        const response = await fetch('/api/save-state', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ deckId, state })
+        });
+        const result = await response.json();
+        if (!result.ok) throw new Error(result.error || '保存失败');
+        setStatus(options.noteMessage || `已保存 revision ${result.revision}`);
+        return true;
+      } catch (error) {
+        setStatus(`保存失败：${error.message}`);
+        return false;
+      }
+    }
+
+    function scheduleNotesSave() {
+      notes[slideId(current)] = notesBox.value;
+      clearTimeout(notesSaveTimer);
+      notesSaveTimer = setTimeout(() => {
+        saveState({ quiet: true, noteMessage: '备注已自动保存' });
+      }, 700);
+    }
+
+    function openPresenter() {
+      const willOpen = !document.body.classList.contains('presenter-mode');
+      if (!willOpen) {
+        saveState({ quiet: true, noteMessage: '演示者备注已保存' });
+      }
+      document.body.classList.toggle('presenter-mode');
+      if (willOpen && (!audienceWindow || audienceWindow.closed)) {
+        audienceWindow = window.open(`${location.pathname}?mode=audience&slide=${current + 1}`, 'html-ppt-studio-audience');
+      }
+      show(current);
+    }
+
+    async function exportPdf() {
+      setStatus('正在导出 PDF...');
+      try {
+        await saveState();
+        const response = await fetch('/api/export-pdf', { method: 'POST' });
+        const result = await response.json();
+        if (!result.ok) throw new Error(result.error || '导出失败');
+        setStatus(`PDF 已生成：${result.filename}`);
+        window.open(result.url, '_blank');
+      } catch (error) {
+        setStatus(`PDF 失败：${error.message}`);
+      }
+    }
+
+    document.getElementById('prevBtn').onclick = prev;
+    document.getElementById('nextBtn').onclick = next;
+    document.getElementById('presentBtn').onclick = openPresenter;
+    document.getElementById('editBtn').onclick = toggleEdit;
+    timerBtn.onclick = toggleTimer;
+    document.getElementById('saveBtn').onclick = saveState;
+    document.getElementById('pdfBtn').onclick = exportPdf;
+    document.getElementById('fullscreenBtn').onclick = () => document.documentElement.requestFullscreen?.();
+    notesBox.addEventListener('input', scheduleNotesSave);
+    document.addEventListener('keydown', event => {
+      if (['INPUT', 'TEXTAREA'].includes(event.target?.tagName) || event.target?.isContentEditable) return;
+      if (['ArrowRight', 'PageDown'].includes(event.key)) { event.preventDefault(); next(); }
+      if (['ArrowLeft', 'PageUp'].includes(event.key)) { event.preventDefault(); prev(); }
+      if (event.key === 'Home') show(0);
+      if (event.key === 'End') show(slides.length - 1);
+    });
+    addEventListener('message', event => {
+      if (event.data?.type === 'show') show(event.data.index, false);
+    });
+    channel && (channel.onmessage = event => {
+      if (event.data?.type === 'show') show(event.data.index, false);
+    });
+    addEventListener('resize', scaleStage);
+    setInterval(updateTimer, 1000);
+    (async () => {
+      await loadPersistedState();
+      scaleStage();
+      updateTimer();
+      show(current, false);
+    })();
+  </script>
+</body>
+</html>

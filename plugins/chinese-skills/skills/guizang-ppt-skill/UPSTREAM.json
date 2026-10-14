@@ -1,0 +1,13 @@
+{
+  "name": "guizang-ppt-skill",
+  "upstream_skill_name": "guizang-ppt-skill",
+  "repository": "op7418/guizang-ppt-skill",
+  "commit": "c91369c449d34755d320a8b81d0734000d99d1ab",
+  "path": ".",
+  "license": "AGPL-3.0",
+  "adaptations": [
+    "中文名称和调用示例",
+    "可移植路径和 Codex 入口适配"
+  ],
+  "upstream_skill_sha256": "57f046e2c8600bb9d5de9dafc6ff1860d13e28eb0d94c6790c58e8ca8ca5e839"
+}

@@ -20,11 +20,12 @@ def validate(root=ROOT):
     assert plugin.is_relative_to(root) and plugin.is_dir()
     manifest = json.loads((plugin / '.codex-plugin/plugin.json').read_text(encoding='utf-8'))
     assert manifest['name'] == entry['name'] == 'chinese-skills'
-    assert manifest['version'] == '1.0.0' and manifest['skills'] == './skills/'
+    assert manifest['version'] == catalog['version'] == '1.0.1' and manifest['skills'] == './skills/'
+    assert catalog['release_tag'] == 'v1.01'
     assert re.search(r'[\u4e00-\u9fff]', manifest['interface']['displayName'])
     names = {s['name'] for s in catalog['skills']}
     skills = plugin / 'skills'
-    assert catalog['skill_count'] == len(names) == len(catalog['skills']) == 40
+    assert catalog['skill_count'] == len(names) == len(catalog['skills']) == 48
     assert names == {p.name for p in skills.iterdir() if p.is_dir()}
     for name in names:
         folder = skills / name
@@ -58,6 +59,18 @@ def validate(root=ROOT):
     assert '<button' in (assets / 'Buttons/0x-Sarthak_hungry-penguin-30.html').read_text(encoding='utf-8')
     helper = (skills / 'image2-apinebula/scripts/image2_apinebula.py').read_text(encoding='utf-8')
     assert 'DEFAULT_API_KEY' not in helper and 'APINEBULA_API_KEY' in helper
+    new_skills = {'ppt-master', 'frontend-slides', 'guizang-ppt-skill', 'huashu-design',
+                  'html-ppt-studio', 'open-slide', 'dashi-ppt-skill', 'gorden-ppt-skill'}
+    assert new_skills <= names
+    for name in new_skills:
+        folder = skills / name
+        provenance = json.loads((folder / 'UPSTREAM.json').read_text(encoding='utf-8'))
+        assert provenance['name'] == name and re.fullmatch(r'[a-f0-9]{40}', provenance['commit'])
+        assert (folder / 'LICENSE').is_file(), name + ': missing upstream license'
+    assert (skills / 'gorden-ppt-skill/NOTICE.md').is_file()
+    assert 'non-commercial' in (skills / 'gorden-ppt-skill/NOTICE.md').read_text(encoding='utf-8').lower()
+    for name in ('create-slide', 'create-theme', 'current-slide', 'apply-comments', 'slide-authoring'):
+        assert (skills / 'open-slide/references/upstream' / (name + '.md')).is_file()
     return {'status': 'PASS', 'plugins': 1, 'skills': len(names), 'galaxy_components': 3802,
             'portable_paths': True, 'credential_shape_scan': 'PASS'}
 

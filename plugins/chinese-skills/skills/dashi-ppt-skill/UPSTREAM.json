@@ -1,0 +1,13 @@
+{
+  "name": "dashi-ppt-skill",
+  "upstream_skill_name": "dashi-ppt",
+  "repository": "chuspeeism/dashi-ppt-skill",
+  "commit": "21dc7e5fc8c3a0d7f6a94948153dd1ee954f4e64",
+  "path": "skills/dashi-ppt",
+  "license": "AGPL-3.0",
+  "adaptations": [
+    "中文名称和调用示例",
+    "可移植路径和 Codex 入口适配"
+  ],
+  "upstream_skill_sha256": "d4a3e924b643abeab591c3b8875e3bb4c0289e7d2fb65ac8dd710b3c559e43d3"
+}

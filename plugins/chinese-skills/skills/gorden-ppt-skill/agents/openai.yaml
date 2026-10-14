@@ -1,0 +1,4 @@
+interface:
+  display_name: "Gorden 中文模板 PPT"
+  short_description: "使用中文 PPTX 模板或用户自带模板制作幻灯片，保留版式；内置模板限非商业用途。"
+  default_prompt: "使用 $chinese-skills:gorden-ppt-skill 使用我提供的模板生成 PPT，保留版式和配色。"

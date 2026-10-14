@@ -1,0 +1,4 @@
+interface:
+  display_name: "网页幻灯片设计"
+  short_description: "创建单文件 HTML 幻灯片，或把已有 PowerPoint 转换成网页演示。"
+  default_prompt: "使用 $chinese-skills:frontend-slides 把这份材料制作成有视觉风格的网页演示。"

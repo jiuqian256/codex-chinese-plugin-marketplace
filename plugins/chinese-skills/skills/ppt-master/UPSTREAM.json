@@ -1,0 +1,13 @@
+{
+  "name": "ppt-master",
+  "upstream_skill_name": "ppt-master",
+  "repository": "hugohe3/ppt-master",
+  "commit": "8070d3df1f6f54b5fb60a9ae66e79c664f050212",
+  "path": "skills/ppt-master",
+  "license": "MIT",
+  "adaptations": [
+    "中文名称和调用示例",
+    "可移植路径和 Codex 入口适配"
+  ],
+  "upstream_skill_sha256": "91a869f988e800314d18db483b66bc05d397f93bd1dbe50255bf83756ef5da14"
+}

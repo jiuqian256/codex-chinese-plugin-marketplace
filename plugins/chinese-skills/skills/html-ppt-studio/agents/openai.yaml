@@ -1,0 +1,4 @@
+interface:
+  display_name: "HTML PPT 编辑工作室"
+  short_description: "生成可编辑和演示的 HTML PPT，支持图片包装、浏览器编辑状态与导出。"
+  default_prompt: "使用 $chinese-skills:html-ppt-studio 把这些确认好的页面图片包装成可演示的 HTML PPT。"

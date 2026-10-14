@@ -1,0 +1,4 @@
+interface:
+  display_name: "花叔 HTML 视觉设计"
+  short_description: "使用 HTML 制作高保真原型、幻灯片、动画和可视化，并执行设计评审。"
+  default_prompt: "使用 $chinese-skills:huashu-design 为这个主题设计有辨识度的幻灯片和视觉方案。"

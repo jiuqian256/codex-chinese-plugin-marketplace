@@ -1,0 +1,60 @@
+{
+  "version": "2026-06-20",
+  "purpose": "Local visual style presets for html-ppt-studio. Use these real page preview images and prompts for WYSIWYG style selection without web search or image generation.",
+  "presets": [
+    {
+      "id": "dark-finance",
+      "name": "暗色科技财经",
+      "recommendedSkill": "html-ppt-studio",
+      "preview": "dark-finance.png",
+      "previewSource": "bundled preview image",
+      "bestFor": "研究报告、正式汇报、科技产业叙事",
+      "prompt": "深色科技财经数据叙事风格：炭黑/黑蓝底、细网格、数据标签、坐标轴、克制青蓝和暖橙强调，像高端研究报告。"
+    },
+    {
+      "id": "apple-glass",
+      "name": "苹果玻璃科技",
+      "recommendedSkill": "deck-open-slide-canvas",
+      "preview": "apple-glass.png",
+      "previewSource": "bundled preview image",
+      "bestFor": "概念页、开场页、抽象技术解释",
+      "prompt": "苹果式玻璃科技风格：大留白、半透明玻璃层、轻辉光、精致圆角、浅蓝青色高光，画面克制灵动。"
+    },
+    {
+      "id": "gov-blue",
+      "name": "政务蓝白简洁",
+      "recommendedSkill": "html-ppt-studio",
+      "preview": "gov-blue.png",
+      "previewSource": "local generated 16:9 reference page stored as preview image",
+      "bestFor": "政府培训、政策说明、对外汇报",
+      "prompt": "政务蓝白简洁风格：深蓝/白色信息层级、清晰标题、稳定版式、少装饰，适合政府人员培训和政策说明。"
+    },
+    {
+      "id": "data-dashboard",
+      "name": "数据仪表盘",
+      "recommendedSkill": "html-ppt-studio",
+      "preview": "data-dashboard.png",
+      "previewSource": "bundled preview image",
+      "bestFor": "指标页、产业分析、能力对比",
+      "prompt": "数据仪表盘风格：指标墙、曲线、坐标轴、热力模块、动态数据增长，适合产业分析和能力对比。"
+    },
+    {
+      "id": "swiss-grid",
+      "name": "瑞士网格",
+      "recommendedSkill": "html-ppt-studio",
+      "preview": "swiss-grid.png",
+      "previewSource": "bundled preview image",
+      "bestFor": "章节封面、结构页、观点页",
+      "prompt": "瑞士国际主义网格风格：强网格、强标题、明确留白、少装饰、高对比色块，适合章节封面和结构页。"
+    },
+    {
+      "id": "warm-industry",
+      "name": "产业报告暖色",
+      "recommendedSkill": "html-ppt-studio",
+      "preview": "warm-industry.png",
+      "previewSource": "bundled preview image",
+      "bestFor": "AI基建、产业链、风险与机会叙事",
+      "prompt": "产业报告暖色风格：炭黑底、暖橙和金色重点、基础设施线框、产业链流向、风险与机会标注。"
+    }
+  ]
+}

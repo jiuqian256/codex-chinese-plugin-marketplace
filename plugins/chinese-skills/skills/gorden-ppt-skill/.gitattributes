@@ -1,0 +1,3 @@
+# Templates are now plain git blobs (embedded fonts stripped, each <14MB).
+# No Git LFS — this keeps clone bandwidth off the LFS quota.
+*.pptx -text

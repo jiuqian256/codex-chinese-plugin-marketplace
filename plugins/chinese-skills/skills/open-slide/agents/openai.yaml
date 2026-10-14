@@ -1,0 +1,4 @@
+interface:
+  display_name: "Open Slide React 演示框架"
+  short_description: "基于 open-slide 上游指导创建和编辑 React 幻灯片，处理主题、讲稿和页面动画。"
+  default_prompt: "使用 $chinese-skills:open-slide 用 open-slide 创建带演讲者备注的产品演示。"

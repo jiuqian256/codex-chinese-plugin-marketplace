@@ -1,0 +1,13 @@
+{
+  "name": "html-ppt-studio",
+  "upstream_skill_name": "html-ppt-studio",
+  "repository": "HZMLJX/html-ppt-studio",
+  "commit": "b56a5d0d5aa7ea521da86d3fe02d667c694a7920",
+  "path": ".",
+  "license": "MIT",
+  "adaptations": [
+    "中文名称和调用示例",
+    "可移植路径和 Codex 入口适配"
+  ],
+  "upstream_skill_sha256": "53d23a69788bb335ba195f1d3df3b98fe7337daec18744deffaec9989fe5d1cd"
+}

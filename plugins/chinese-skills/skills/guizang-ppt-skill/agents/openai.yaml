@@ -1,0 +1,4 @@
+interface:
+  display_name: "归藏杂志与瑞士风 PPT"
+  short_description: "制作杂志风或瑞士风网页 PPT，包含横向翻页、演讲备注和配图流程。"
+  default_prompt: "使用 $chinese-skills:guizang-ppt-skill 把这篇文章制作成 8 页瑞士风网页 PPT。"

@@ -1,6 +1,6 @@
 {
-  "version": "1.0.0",
-  "skill_count": 40,
+  "version": "1.0.1",
+  "skill_count": 48,
   "skills": [
     {
       "name": "3d-file-format-converter",
@@ -401,6 +401,102 @@
       "source_area": "codex",
       "source_skill_sha256": "551adca942227b44192edba88acd4e8db911f0121ce58ad16944ccf6a896a74a",
       "license": null
+    },
+    {
+      "name": "ppt-master",
+      "display_name": "PPT Master 原生幻灯片制作",
+      "usage": "从文档或主题制作原生可编辑 PPTX，支持模板继承、图表、动画与讲稿。",
+      "example": "使用 $chinese-skills:ppt-master 将这份文档制作成原生可编辑的 PowerPoint。",
+      "category": "PPT 与演示文稿",
+      "source_area": "github",
+      "source_skill_sha256": "91a869f988e800314d18db483b66bc05d397f93bd1dbe50255bf83756ef5da14",
+      "license": "MIT",
+      "repository": "hugohe3/ppt-master",
+      "commit": "8070d3df1f6f54b5fb60a9ae66e79c664f050212"
+    },
+    {
+      "name": "frontend-slides",
+      "display_name": "网页幻灯片设计",
+      "usage": "创建单文件 HTML 幻灯片，或把已有 PowerPoint 转换成网页演示。",
+      "example": "使用 $chinese-skills:frontend-slides 把这份材料制作成有视觉风格的网页演示。",
+      "category": "PPT 与演示文稿",
+      "source_area": "github",
+      "source_skill_sha256": "832994fe1dfcce2aa7ceca9a1b7b708eca94becef242713999855f4e946cf4d5",
+      "license": "MIT",
+      "repository": "zarazhangrui/frontend-slides",
+      "commit": "9906a34d640d2111f724544cbc50f7f130569ae1"
+    },
+    {
+      "name": "guizang-ppt-skill",
+      "display_name": "归藏杂志与瑞士风 PPT",
+      "usage": "制作杂志风或瑞士风网页 PPT，包含横向翻页、演讲备注和配图流程。",
+      "example": "使用 $chinese-skills:guizang-ppt-skill 把这篇文章制作成 8 页瑞士风网页 PPT。",
+      "category": "PPT 与演示文稿",
+      "source_area": "github",
+      "source_skill_sha256": "57f046e2c8600bb9d5de9dafc6ff1860d13e28eb0d94c6790c58e8ca8ca5e839",
+      "license": "AGPL-3.0",
+      "repository": "op7418/guizang-ppt-skill",
+      "commit": "c91369c449d34755d320a8b81d0734000d99d1ab"
+    },
+    {
+      "name": "huashu-design",
+      "display_name": "花叔 HTML 视觉设计",
+      "usage": "使用 HTML 制作高保真原型、幻灯片、动画和可视化，并执行设计评审。",
+      "example": "使用 $chinese-skills:huashu-design 为这个主题设计有辨识度的幻灯片和视觉方案。",
+      "category": "PPT 与演示文稿",
+      "source_area": "github",
+      "source_skill_sha256": "37c69d0e80662284a378eb46d9d142cac004d4bf8117d7f79495377bd7279b30",
+      "license": "MIT",
+      "repository": "alchaincyf/huashu-design",
+      "commit": "3bd465d7ad29ffcb284113beb48910b469f00797"
+    },
+    {
+      "name": "html-ppt-studio",
+      "display_name": "HTML PPT 编辑工作室",
+      "usage": "生成可编辑和演示的 HTML PPT，支持图片包装、浏览器编辑状态与导出。",
+      "example": "使用 $chinese-skills:html-ppt-studio 把这些确认好的页面图片包装成可演示的 HTML PPT。",
+      "category": "PPT 与演示文稿",
+      "source_area": "github",
+      "source_skill_sha256": "53d23a69788bb335ba195f1d3df3b98fe7337daec18744deffaec9989fe5d1cd",
+      "license": "MIT",
+      "repository": "HZMLJX/html-ppt-studio",
+      "commit": "b56a5d0d5aa7ea521da86d3fe02d667c694a7920"
+    },
+    {
+      "name": "open-slide",
+      "display_name": "Open Slide React 演示框架",
+      "usage": "基于 open-slide 上游指导创建和编辑 React 幻灯片，处理主题、讲稿和页面动画。",
+      "example": "使用 $chinese-skills:open-slide 用 open-slide 创建带演讲者备注的产品演示。",
+      "category": "PPT 与演示文稿",
+      "source_area": "github",
+      "source_skill_sha256": "a12e5ef4efc876c3687b9941c8f64ec827efcfd5e3d9625dc781ebc3ca739c83",
+      "license": "MIT",
+      "repository": "open-slide/open-slide",
+      "commit": "4081bf973db1c4b81b2772fafa66f93004c98bde"
+    },
+    {
+      "name": "dashi-ppt-skill",
+      "display_name": "大师 PPT 多主题制作",
+      "usage": "通过 JSON 计划和内置主题生成浏览器可编辑的 HTML 演示，并导出 PPTX 或 PDF。",
+      "example": "使用 $chinese-skills:dashi-ppt-skill 为这个汇报生成多主题可编辑 PPT，并导出 PPTX。",
+      "category": "PPT 与演示文稿",
+      "source_area": "github",
+      "source_skill_sha256": "d4a3e924b643abeab591c3b8875e3bb4c0289e7d2fb65ac8dd710b3c559e43d3",
+      "license": "AGPL-3.0",
+      "repository": "chuspeeism/dashi-ppt-skill",
+      "commit": "21dc7e5fc8c3a0d7f6a94948153dd1ee954f4e64"
+    },
+    {
+      "name": "gorden-ppt-skill",
+      "display_name": "Gorden 中文模板 PPT",
+      "usage": "使用中文 PPTX 模板或用户自带模板制作幻灯片，保留版式；内置模板限非商业用途。",
+      "example": "使用 $chinese-skills:gorden-ppt-skill 使用我提供的模板生成 PPT，保留版式和配色。",
+      "category": "PPT 与演示文稿",
+      "source_area": "github",
+      "source_skill_sha256": "f3ecf7a39b0eceef3af62663952227646143834943409862d72efde306205072",
+      "license": "MIT source; non-commercial templates",
+      "repository": "GordenSun/GordenPPTSkill",
+      "commit": "7d4a61cbd8363b92e4a30784f8ca460a0a2b0a33"
     }
   ],
   "duplicate_names": [
@@ -409,5 +505,6 @@
   "excluded_sources": [
     "GPT/Codex built-in system skills",
     "installed plugin cache skills"
-  ]
+  ],
+  "release_tag": "v1.01"
 }

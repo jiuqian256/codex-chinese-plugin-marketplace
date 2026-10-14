@@ -1,0 +1,28 @@
+{
+  "deckId": "basic-deck",
+  "revision": 0,
+  "totalSlides": 3,
+  "slideOrder": [
+    {
+      "slideId": "slide-1",
+      "index": 0,
+      "title": "像传统 PPT 一样编辑和演示 HTML 内容"
+    },
+    {
+      "slideId": "slide-2",
+      "index": 1,
+      "title": "运行时契约"
+    },
+    {
+      "slideId": "slide-3",
+      "index": 2,
+      "title": "编辑契约"
+    }
+  ],
+  "dirtySlides": [],
+  "notes": {
+    "slide-1": "介绍用途：像传统 PPT 一样编辑和演示 HTML 内容。",
+    "slide-2": "说明内容、运行时、本地服务和模型层为什么要分开。",
+    "slide-3": "强调网页手动编辑必须保存成可读取的状态文件。"
+  }
+}

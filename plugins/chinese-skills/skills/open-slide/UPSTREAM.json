@@ -1,0 +1,13 @@
+{
+  "name": "open-slide",
+  "upstream_skill_name": "slide-authoring",
+  "repository": "open-slide/open-slide",
+  "commit": "4081bf973db1c4b81b2772fafa66f93004c98bde",
+  "path": "packages/core/skills/slide-authoring",
+  "license": "MIT",
+  "adaptations": [
+    "中文名称和调用示例",
+    "可移植路径和 Codex 入口适配"
+  ],
+  "upstream_skill_sha256": "a12e5ef4efc876c3687b9941c8f64ec827efcfd5e3d9625dc781ebc3ca739c83"
+}

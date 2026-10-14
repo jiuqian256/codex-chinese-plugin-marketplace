@@ -1,0 +1,13 @@
+{
+  "name": "frontend-slides",
+  "upstream_skill_name": "frontend-slides",
+  "repository": "zarazhangrui/frontend-slides",
+  "commit": "9906a34d640d2111f724544cbc50f7f130569ae1",
+  "path": "plugins/frontend-slides/skills/frontend-slides",
+  "license": "MIT",
+  "adaptations": [
+    "中文名称和调用示例",
+    "可移植路径和 Codex 入口适配"
+  ],
+  "upstream_skill_sha256": "832994fe1dfcce2aa7ceca9a1b7b708eca94becef242713999855f4e946cf4d5"
+}

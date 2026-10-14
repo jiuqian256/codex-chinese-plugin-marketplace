@@ -1,0 +1,13 @@
+{
+  "name": "gorden-ppt-skill",
+  "upstream_skill_name": "gorden-ppt-skill",
+  "repository": "GordenSun/GordenPPTSkill",
+  "commit": "7d4a61cbd8363b92e4a30784f8ca460a0a2b0a33",
+  "path": ".",
+  "license": "MIT source; non-commercial templates",
+  "adaptations": [
+    "中文名称和调用示例",
+    "可移植路径和 Codex 入口适配"
+  ],
+  "upstream_skill_sha256": "f3ecf7a39b0eceef3af62663952227646143834943409862d72efde306205072"
+}

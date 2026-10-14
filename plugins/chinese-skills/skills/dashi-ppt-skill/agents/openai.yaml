@@ -1,0 +1,6 @@
+interface:
+  display_name: "大师 PPT 多主题制作"
+  short_description: "通过 JSON 计划和内置主题生成浏览器可编辑的 HTML 演示，并导出 PPTX 或 PDF。"
+  icon_small: "./assets/skill/dashi-ppt-small.png"
+  icon_large: "./assets/skill/dashi-ppt.png"
+  default_prompt: "使用 $chinese-skills:dashi-ppt-skill 为这个汇报生成多主题可编辑 PPT，并导出 PPTX。"

@@ -1,0 +1,662 @@
+{
+  "$schema": "ppt-skill-manifest/v1",
+  "skill_name": "ppt-builder",
+  "version": "1.0.20",
+  "file_count": 109,
+  "files": {
+    ".gitattributes": {
+      "sha256": "538c7a3e4a5ddc32a56c2f79f7e3abae99a9cb98e587bf681d9a7a1d19a554dc",
+      "size": 151,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.6"
+    },
+    ".gitignore": {
+      "sha256": "30f85f63855e540d13dc85d70352d92bed17c6383a918a66ca227f8701d7c5d0",
+      "size": 300,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "CHANGELOG.md": {
+      "sha256": "7e2e2acccd888d3c4443b6a0883a405c5d7654757686528c17fa43c5bbee24a4",
+      "size": 22429,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.20"
+    },
+    "LICENSE": {
+      "sha256": "6f52f1baed8c393758ff6e8bf9c515edd6fd377187ae38a64165a330573b7829",
+      "size": 1417,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "NOTICE.md": {
+      "sha256": "f495a2a5d809c3b72f5095cdf9c951eaab09bd81652ed04037a12189ace220c2",
+      "size": 2145,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "README.md": {
+      "sha256": "d1b4c095c0c1c0216131b096e6c4b644aa0437028ab3e1abf5d003e12d9a85cc",
+      "size": 3758,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.18"
+    },
+    "SKILL.md": {
+      "sha256": "f3ecf7a39b0eceef3af62663952227646143834943409862d72efde306205072",
+      "size": 14179,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.18"
+    },
+    "VERSION": {
+      "sha256": "975801abe1af6fc1709ed2cd5b0680a4ea1daca7a5862e78b4ff941bb1420191",
+      "size": 7,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.20"
+    },
+    "assets/group-qr.jpg": {
+      "sha256": "ba5b27c705682cfbcf4c51c6941d921191c7c5f5bfab0a26313c7b0b6cf6c8c8",
+      "size": 139411,
+      "version_added": "1.0.5",
+      "last_modified": "1.0.16"
+    },
+    "assets/showcase-1.jpg": {
+      "sha256": "b7fbc23cb084f4777d59c321630cc73744d1edf67fbbd6686c45fda0ed3a2dce",
+      "size": 121616,
+      "version_added": "1.0.15",
+      "last_modified": "1.0.15"
+    },
+    "assets/showcase-2.jpg": {
+      "sha256": "702aae2a849b668a32bfec08e1bca23b9869a4382daaccb78d427d733e7cb05d",
+      "size": 109960,
+      "version_added": "1.0.15",
+      "last_modified": "1.0.15"
+    },
+    "assets/showcase-3.jpg": {
+      "sha256": "d037349ad467029be7d9d1e2aa98384e65924904c32c5115f2f73262eccbdc6a",
+      "size": 97997,
+      "version_added": "1.0.15",
+      "last_modified": "1.0.15"
+    },
+    "references/chart-editing.md": {
+      "sha256": "37ccd257ae8f8c655e02703e90cdd9163f1254e21587cbe1c833ed8a2854f999",
+      "size": 3495,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "references/custom-template-workflow.md": {
+      "sha256": "969da6e73ea5b01b58ab33bf76eabc9f3f9cd4ba2d0b16e04c555aea9218582e",
+      "size": 3346,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "references/original-design-guide.md": {
+      "sha256": "fbe502f5c4a5d4838c6ddeb321eb59bf0a31615be6cf9f7a73fff1bf11c216bb",
+      "size": 4136,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.18"
+    },
+    "references/pptx-edit-schema.md": {
+      "sha256": "8d3ec50fa22ae8f4598d6bec9001b19a50b4e89492a683b494b76d505690a02d",
+      "size": 6211,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "references/workflow.md": {
+      "sha256": "513b36cd1f362a7c67751f9908b5796298320759dc427856fe19c5a0db7b5f96",
+      "size": 6452,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.17"
+    },
+    "scripts/apply_update.py": {
+      "sha256": "f51608a3e2c7097eca52d932247a6c3fbb6bd951265c26a472cc3eb17caa86e3",
+      "size": 9803,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.6"
+    },
+    "scripts/build_manifest.py": {
+      "sha256": "55b98cebf5b609eb56253dacf1f6a531fc5c2d2bcb9f13c847c9e251768ef9d2",
+      "size": 2774,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.1"
+    },
+    "scripts/build_pptx.py": {
+      "sha256": "3ca8d9653a79c6044770d66be763002f0c47142ad7e8a1e4d375952480bd1328",
+      "size": 13415,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.17"
+    },
+    "scripts/check_update.py": {
+      "sha256": "6c2439d80ab47451b76f074fef7819b885bdecef46441061dd762202bf4f4d42",
+      "size": 5764,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.1"
+    },
+    "scripts/compute_capacity.py": {
+      "sha256": "1a06388592b55e53620f7f4ab0c84c4ccbf342cad0d9a538b457259aabdfe345",
+      "size": 10552,
+      "version_added": "1.0.7",
+      "last_modified": "1.0.7"
+    },
+    "scripts/render_slides.py": {
+      "sha256": "b615e9c9c12545526a6621b7deeec6721b7b815ced8d47d5b29e7aeedc94eaf5",
+      "size": 1943,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/INDEX.md": {
+      "sha256": "56c7431cf88c2326a81be2fd5ac459fd9d3a48ff8d5d65a5798ed822d25fda1c",
+      "size": 7725,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.18"
+    },
+    "templates/architecture-deck/detail.json": {
+      "sha256": "22d19aed8e536957925e257e5cccfaa64323b54a0b7e7132ba224923b9c0a0c8",
+      "size": 1207965,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.7"
+    },
+    "templates/architecture-deck/intro.md": {
+      "sha256": "15347ea8ec5e50fb481385d2bc018c2f842d4dfd047be5bc91cef1d31d2d217a",
+      "size": 2862,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.2"
+    },
+    "templates/architecture-deck/preview.png": {
+      "sha256": "b34790fdbe1b650a7391190f00865b6e7be73c5879584ad575691fabcb9d54bf",
+      "size": 881157,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.2"
+    },
+    "templates/architecture-deck/template.pptx": {
+      "sha256": "03cdc0b85e2e26ea9a2f02e467c5fb79614299250514fb3399f6170485c9e06f",
+      "size": 1026044,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.6"
+    },
+    "templates/competition-speech/detail.json": {
+      "sha256": "23e4826c4f52204becfc032b82680c689717e76166d742e0ab5f6e8970b0c505",
+      "size": 1450032,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.7"
+    },
+    "templates/competition-speech/intro.md": {
+      "sha256": "073a09f30e526541460088b3065bc10cb5146bde928a9e9298950ec9372fa528",
+      "size": 2205,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/competition-speech/preview.png": {
+      "sha256": "a27b1d341ec29d2252db2a9eaa72562f8b8d174c0d22394269ff961d9529287f",
+      "size": 982218,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/competition-speech/template.pptx": {
+      "sha256": "3ac9bbdb0107fd90b8cdca088e3408f2c41d7bf13b4e9fc1a4d2fd177808d0a7",
+      "size": 1165153,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.6"
+    },
+    "templates/cute-orange-class/detail.json": {
+      "sha256": "a331c5585edf92a6d21934552efd37a6eac5f27ec7a63bb0e057dce66ea0203f",
+      "size": 77391,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.7"
+    },
+    "templates/cute-orange-class/intro.md": {
+      "sha256": "a4c3eedcc588dfed02e4c1af0a09ab17b2cebaf528df116dca188522e976b684",
+      "size": 3041,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/cute-orange-class/preview.png": {
+      "sha256": "0534bed9065e70f276d3566edd6486736ed97bd593be4db8da7a8a83aa76c5e2",
+      "size": 737531,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/cute-orange-class/template.pptx": {
+      "sha256": "0e34ee4df6f9d1bbb7529bad71d3f75ec1181504e1694b96f8d4a13d9a3a072f",
+      "size": 3139395,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.6"
+    },
+    "templates/data-viz-deck/detail.json": {
+      "sha256": "4a8c9bff07379033f43d2d6637a3f3968ab41abcfd10837309e31c07493a342b",
+      "size": 1021649,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.7"
+    },
+    "templates/data-viz-deck/intro.md": {
+      "sha256": "a8f7201e36554371598a2ef070951d41968a62fbe2e6e0d36aa840fa547f28eb",
+      "size": 3454,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/data-viz-deck/preview.png": {
+      "sha256": "47f2a76df9eb2861578b2103fbd159b5554613768ce6aa16aaf08ca22c119a09",
+      "size": 844847,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/data-viz-deck/template.pptx": {
+      "sha256": "ceb16faad8ac784b514a2dcc140933077049dcb744a2fa7be89a3a7a7da24923",
+      "size": 2465317,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.6"
+    },
+    "templates/geometric-summary/detail.json": {
+      "sha256": "0a2e04e171e277983bf4a188ea432179f4cc279fa4c58e3b09a15ea713c9d781",
+      "size": 183239,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.7"
+    },
+    "templates/geometric-summary/intro.md": {
+      "sha256": "854e0817f9088804d06c8f703de530c3c9f68ca0838bf852f2ccfd296fef3826",
+      "size": 2558,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/geometric-summary/preview.png": {
+      "sha256": "ebfab087064a0fb489b3cc0331f55fcfd2b631fbb93ba9a73dec05a805944dfc",
+      "size": 565416,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/geometric-summary/template.pptx": {
+      "sha256": "94c24c9cb259caf88bbbf86f47771b69ef36873491c2cfe8161f54ec56fcaebd",
+      "size": 10205380,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.6"
+    },
+    "templates/mckinsey-style/detail.json": {
+      "sha256": "3161c703122c80b9af86e4ba0bb454b9465e7f0a304789ce1d0a3ed1105ef0c4",
+      "size": 1027947,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.7"
+    },
+    "templates/mckinsey-style/intro.md": {
+      "sha256": "b01c305a67d5e5d47d9d67f41dbadc7a55953a32fef8f488e2c8cdbdd7337e81",
+      "size": 2731,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.2"
+    },
+    "templates/mckinsey-style/preview.png": {
+      "sha256": "bd5b55adffd9f946f4b01cddae263e838a4634af9871edc34b1ab370b5117e85",
+      "size": 761958,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.2"
+    },
+    "templates/mckinsey-style/template.pptx": {
+      "sha256": "4318e0275748feb5bdea2bf81819312f99f97474fc37a88b25f62ca01b143b8c",
+      "size": 612809,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.20"
+    },
+    "templates/minimal-business-summary/detail.json": {
+      "sha256": "cf6447e594a13bcf5464372572c4bee5036a93f7629235d4d9ff85f5e096f3cc",
+      "size": 109349,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.7"
+    },
+    "templates/minimal-business-summary/intro.md": {
+      "sha256": "8f3e4055786d5968b2baa1288e001f1f9cac42430311bb2fd2f7dbcec44cdbe0",
+      "size": 2272,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/minimal-business-summary/preview.png": {
+      "sha256": "482174b8a70e7a0f775730d1527d3da3d3be5f91881eeff548111d349d862bb0",
+      "size": 332759,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/minimal-business-summary/template.pptx": {
+      "sha256": "156cb8939fc43f96559b525c673c8bebb338f1fca77ce6b2e823b2a16d46befc",
+      "size": 3801367,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.6"
+    },
+    "templates/operations-deck/detail.json": {
+      "sha256": "325b1398455238cab25155394a30a6fe53721ca3c92941c45505e0e8ec7a2482",
+      "size": 1125001,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.7"
+    },
+    "templates/operations-deck/intro.md": {
+      "sha256": "d8500d7233c29bf5fda226b6939b557c9f0e41bf268456e559b554abb7943ffc",
+      "size": 2731,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/operations-deck/preview.png": {
+      "sha256": "5868af0930472f45ae185165fead56c72e346ad4e6069efaf582c4510e8a7ad4",
+      "size": 672722,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/operations-deck/template.pptx": {
+      "sha256": "1b5878e724e0177bae812e7c8e3b41fabfcdd5bb8b9e4af2c9506595437f16ca",
+      "size": 2715308,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.6"
+    },
+    "templates/premium-corp/detail.json": {
+      "sha256": "19d59cad71314fb8751f5f712487c78bad65ea7da7d9ba2fe131b01a4650af47",
+      "size": 851838,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.7"
+    },
+    "templates/premium-corp/intro.md": {
+      "sha256": "c252da9f12eaea795b29fe2f5813b8db8a3a5afac42a851b5b7af20427b58ea3",
+      "size": 3428,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.1"
+    },
+    "templates/premium-corp/preview.png": {
+      "sha256": "c5e6b4fddb0b3074cd7f27e96e1a6082307a93e9ffa4369bbc4a8a29aed096da",
+      "size": 915496,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.1"
+    },
+    "templates/premium-corp/template.pptx": {
+      "sha256": "502c871be80b930400e9815ef0581232610261a8c0389d1642b409b872bd0c28",
+      "size": 771953,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.6"
+    },
+    "templates/quarterly-illust/detail.json": {
+      "sha256": "92a06e36e8efa7aa134f7bb7ee6706911ebe6e057adfc7220a312bbb9fbca7f4",
+      "size": 139415,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.7"
+    },
+    "templates/quarterly-illust/intro.md": {
+      "sha256": "d17388a69788e3f9574ad5299b435a87836ed0626a68da0979570af63c1e63f5",
+      "size": 2795,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/quarterly-illust/preview.png": {
+      "sha256": "ddcfea9c3b0f46bfb59b05511e0ec35ad5dc95e11760410efd911da7d21cfb69",
+      "size": 520460,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/quarterly-illust/template.pptx": {
+      "sha256": "558ce85c0d64cd2a06faf88d6a4aa331e8cd4c685c59101c835ded2fbc87696d",
+      "size": 13951095,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.6"
+    },
+    "templates/red-patriot-general/detail.json": {
+      "sha256": "b79d454a476245d466a2d863e8d882d480b550b0b297e47e4fae6f5b6786a3dc",
+      "size": 168542,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.7"
+    },
+    "templates/red-patriot-general/intro.md": {
+      "sha256": "db38395152db2b7f90957ba562cde74a10e96978e610094bac8f54affb6d5f0f",
+      "size": 2962,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/red-patriot-general/preview.png": {
+      "sha256": "093b82e5e8c66504ed3e57c8892f5f5847d93e7aa55bac40f4776a92dc4974ec",
+      "size": 1425787,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/red-patriot-general/template.pptx": {
+      "sha256": "bab045bca75ab5bd99db2aaafa9641cb9a45c2baa9c1644b79ae5925c7a95295",
+      "size": 9318224,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.6"
+    },
+    "templates/red-patriot-youth/detail.json": {
+      "sha256": "472162e9ba08da5aed0295bd8c7027def68472c678441e813b4c94eb2d2afc2a",
+      "size": 107321,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.7"
+    },
+    "templates/red-patriot-youth/intro.md": {
+      "sha256": "6e9512e3f5bf1025fe01f316872ba0af66966b8ad1830b777311f333b9d5d4c4",
+      "size": 3063,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/red-patriot-youth/preview.png": {
+      "sha256": "5ef1b08fe7313df28d542d3e23c87c0f98ace34c34fa38c4fcb8eac25d328340",
+      "size": 908470,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/red-patriot-youth/template.pptx": {
+      "sha256": "1e8d3cac61b7b6fa2efb2e9c0f4e100a9fea22deff66b8fe971d543b65ec3ed4",
+      "size": 6788679,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.6"
+    },
+    "templates/red-teaching-framework/detail.json": {
+      "sha256": "408c4c1fc19ce032ab19600b3bbb0aaee25437dcb68700b8d50d9cb9805082f6",
+      "size": 790350,
+      "version_added": "1.0.18",
+      "last_modified": "1.0.18"
+    },
+    "templates/red-teaching-framework/intro.md": {
+      "sha256": "93eda9d42a810a1f5eaeb7252be65ce8926aa9548b6d1afceaaed0a6dfd0ff04",
+      "size": 3762,
+      "version_added": "1.0.18",
+      "last_modified": "1.0.18"
+    },
+    "templates/red-teaching-framework/preview.png": {
+      "sha256": "46730d646d339094f4d5e35b84301757577841167cf6594c254a82679d8d9e8a",
+      "size": 1117333,
+      "version_added": "1.0.18",
+      "last_modified": "1.0.18"
+    },
+    "templates/red-teaching-framework/template.pptx": {
+      "sha256": "f083a1799e2a4ce2f66135c250977d1c348f582d6f004cca549f4a3b027fa256",
+      "size": 6715329,
+      "version_added": "1.0.18",
+      "last_modified": "1.0.20"
+    },
+    "templates/red-teaching-models/detail.json": {
+      "sha256": "cc80db3959a6b68181923fcfe582cc8f963dcdced983150bae9a5ad1afe00eb5",
+      "size": 786370,
+      "version_added": "1.0.18",
+      "last_modified": "1.0.18"
+    },
+    "templates/red-teaching-models/intro.md": {
+      "sha256": "a507efabeff5379b1a5d1f6baea2e7fc7acd936fcdf6b5b644a62033b559052c",
+      "size": 3744,
+      "version_added": "1.0.18",
+      "last_modified": "1.0.18"
+    },
+    "templates/red-teaching-models/preview.png": {
+      "sha256": "bd72eb29a082db242d46138df2ebec15aeb98af7f9419b2db4caf448b0b2cab4",
+      "size": 1011521,
+      "version_added": "1.0.18",
+      "last_modified": "1.0.20"
+    },
+    "templates/red-teaching-models/template.pptx": {
+      "sha256": "268d5c1cba9ff94b3ea6b03b8ad007110c4d839624bfc3f70b6cf42644f7edee",
+      "size": 2602921,
+      "version_added": "1.0.18",
+      "last_modified": "1.0.20"
+    },
+    "templates/report-massive-charts/detail.json": {
+      "sha256": "2c92adb7c9e7d384984837402394587398aba72bb3819649d3c1d15fd367e2eb",
+      "size": 1021413,
+      "version_added": "1.0.2",
+      "last_modified": "1.0.7"
+    },
+    "templates/report-massive-charts/intro.md": {
+      "sha256": "5e87b04a87e9d0d4ca79c0433c82389cf988655bcbe29052ff1c1e6431f0ec19",
+      "size": 1933,
+      "version_added": "1.0.2",
+      "last_modified": "1.0.2"
+    },
+    "templates/report-massive-charts/preview.png": {
+      "sha256": "b6454fc997d087227918517dd7a3de445acab26ffac68dd3aa586e95e0edec4a",
+      "size": 971905,
+      "version_added": "1.0.2",
+      "last_modified": "1.0.2"
+    },
+    "templates/report-massive-charts/template.pptx": {
+      "sha256": "09be8eaf86127e3619089b4465a8f235159efdb91b4bcc99b7ed0bead65feea2",
+      "size": 1768688,
+      "version_added": "1.0.2",
+      "last_modified": "1.0.6"
+    },
+    "templates/report-massive-models/detail.json": {
+      "sha256": "9c9b13b44bfee309fa466aead3d8c610216ac9d1657b25b3f69b7ff6b77b429d",
+      "size": 1003544,
+      "version_added": "1.0.2",
+      "last_modified": "1.0.7"
+    },
+    "templates/report-massive-models/intro.md": {
+      "sha256": "05ccb3f021035e6c2db1e14c4ae8e46ec7dd84cc04507d574f2445fee67f35fa",
+      "size": 1866,
+      "version_added": "1.0.2",
+      "last_modified": "1.0.2"
+    },
+    "templates/report-massive-models/preview.png": {
+      "sha256": "f771ec31533598514bafbc3cf0e7060fdacef60b843cfce4007e8f33cae08f51",
+      "size": 1002772,
+      "version_added": "1.0.2",
+      "last_modified": "1.0.2"
+    },
+    "templates/report-massive-models/template.pptx": {
+      "sha256": "2ef2d8446af183ed78c108ea6587417ded72068a8eb53d666c9687058988bf5a",
+      "size": 1560732,
+      "version_added": "1.0.2",
+      "last_modified": "1.0.6"
+    },
+    "templates/report-massive-reports/detail.json": {
+      "sha256": "ec9ecdca477820cf565c7e4cdebbdcf0792c6649d11b39a118b46217a6618ef1",
+      "size": 836284,
+      "version_added": "1.0.2",
+      "last_modified": "1.0.7"
+    },
+    "templates/report-massive-reports/intro.md": {
+      "sha256": "f9322518f11662f1d5c44557f3e1eabff5fea0c48fb26cd9ec66c8dd968012fe",
+      "size": 1964,
+      "version_added": "1.0.2",
+      "last_modified": "1.0.2"
+    },
+    "templates/report-massive-reports/preview.png": {
+      "sha256": "869308af5cbe0b155aff792babc4190774e02fcdebac598b77e3a863d928cece",
+      "size": 631862,
+      "version_added": "1.0.2",
+      "last_modified": "1.0.2"
+    },
+    "templates/report-massive-reports/template.pptx": {
+      "sha256": "31e32d9dbe6e4e5b5391c5df77cb580178337c4f806cd72f08e4f3c3f45d5873",
+      "size": 1197919,
+      "version_added": "1.0.2",
+      "last_modified": "1.0.20"
+    },
+    "templates/report-savior/detail.json": {
+      "sha256": "104bcf36fae04e2b23a6ec21ae8a306bb117c425b8a4e933d6dcfce2c4924e03",
+      "size": 1059192,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.7"
+    },
+    "templates/report-savior/intro.md": {
+      "sha256": "4ad091c3e25ec5cf0e2015da8627a66b8390a74f18ffdd0f181d4ba8edf6c059",
+      "size": 2998,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.2"
+    },
+    "templates/report-savior/preview.png": {
+      "sha256": "3a8394e7d46d9379261fc2346624a8751a7e5323cec2568c609da69b8f9c2104",
+      "size": 852978,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.2"
+    },
+    "templates/report-savior/template.pptx": {
+      "sha256": "7b79ef03b4dcce5d38a91840d37778e49d04f4f0ae3c43068e3dd7dd62bc3d8e",
+      "size": 1857738,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.6"
+    },
+    "templates/thesis-formula/detail.json": {
+      "sha256": "e975216b7ea3cf9ffaddf40f995df86708546688c555c9b9f21128e9c16a353a",
+      "size": 331451,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.7"
+    },
+    "templates/thesis-formula/intro.md": {
+      "sha256": "63c45cc67d071147652391aa5f52d4976a09939a331007f0d1c2f89dfdd2921b",
+      "size": 2840,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.2"
+    },
+    "templates/thesis-formula/preview.png": {
+      "sha256": "9edc643bbaf68c271d34d530a5b40bc6f62ef77642d95bbabf279c767f0ab06e",
+      "size": 538603,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.2"
+    },
+    "templates/thesis-formula/template.pptx": {
+      "sha256": "ac149b78583ce751648f096cc07fe358d663d1f94efb365b45957dcfffc02d04",
+      "size": 1115574,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.6"
+    },
+    "templates/thesis-novice/detail.json": {
+      "sha256": "9d8aa2b3cf6b7deeaed992610217b9a1050247d050bd7e7149a4a5720dd002df",
+      "size": 276215,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.7"
+    },
+    "templates/thesis-novice/intro.md": {
+      "sha256": "38f778f8c9f57815749c566e2df40a6396d8592c27ebf82d52241448d472704e",
+      "size": 3313,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.2"
+    },
+    "templates/thesis-novice/preview.png": {
+      "sha256": "3d643d279a3832753bf93a3d6621ef6047f3b87d264b8aff157fdf89688244fb",
+      "size": 574177,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.2"
+    },
+    "templates/thesis-novice/template.pptx": {
+      "sha256": "fadca83953a2bc87de78dcdc1fe76515f334cd9014905b267d07edb36c4b27dd",
+      "size": 1400683,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.6"
+    },
+    "templates/top-thesis/detail.json": {
+      "sha256": "d36b5dfe6b83aa01cd1b4b6c973420ffb63bf7ac977df95584f8aa5bd5b761c5",
+      "size": 323684,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.7"
+    },
+    "templates/top-thesis/intro.md": {
+      "sha256": "6e5da774989c22ecbf81bf6e6c631aca72fcfb7f5681848f4f73d09f53d7cc43",
+      "size": 2183,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.2"
+    },
+    "templates/top-thesis/preview.png": {
+      "sha256": "afdc5247da78d08d433713dc9faf839d9cbbc70a42625a86cf4679f0a5f06d20",
+      "size": 652399,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.2"
+    },
+    "templates/top-thesis/template.pptx": {
+      "sha256": "a4cb74324d5317b90e326f5409506653c92fa164b283c8e54a40bc2184c4506f",
+      "size": 1120054,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.6"
+    },
+    "updates.json": {
+      "sha256": "8baa2d306d6252e39aa3c4b7d2206ae9a40070262d1ca1843ad28359698a325b",
+      "size": 18984,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.20"
+    }
+  }
+}
