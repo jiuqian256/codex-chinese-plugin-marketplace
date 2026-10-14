@@ -1,0 +1,4 @@
+interface:
+  display_name: "GSAP 时间线编排"
+  short_description: "安排多个动画的顺序、重叠、标签、嵌套和播放控制。提供对应的执行与检查指导。"
+  default_prompt: "使用 $chinese-skills:gsap-timeline 编排标题、图片和按钮的连续入场动画。"

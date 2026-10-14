@@ -1,0 +1,413 @@
+{
+  "version": "1.0.0",
+  "skill_count": 40,
+  "skills": [
+    {
+      "name": "3d-file-format-converter",
+      "display_name": "3D 文件识别与格式转换",
+      "usage": "识别真实 3D 文件格式，选择 Blender、Rhino 等工具，保留文件名导出 OBJ 或 FBX。",
+      "example": "使用 $chinese-skills:3d-file-format-converter 把这个 3D 文件转换成 OBJ 和 FBX，保留原文件名。",
+      "category": "图像与办公",
+      "source_area": "codex",
+      "source_skill_sha256": "e7e47157ca503294397187387d4e60f1c8a613ed207c7b438b0e87fc8f8f0e80",
+      "license": null
+    },
+    {
+      "name": "amazon-a-plus-detail-page-v3",
+      "display_name": "亚马逊 A+ 详情页制作",
+      "usage": "根据白底产品照片规划并制作完整的亚马逊 A+ 详情页图片。",
+      "example": "使用 $chinese-skills:amazon-a-plus-detail-page-v3 用这些产品照片制作亚马逊 A+ 详情页。",
+      "category": "图像与办公",
+      "source_area": "codex",
+      "source_skill_sha256": "66f6dca354c58e2e472cf6cf7f2b267705f183b6fcc383fddd5afd48f71bbf79",
+      "license": null
+    },
+    {
+      "name": "coze-agent-collaboration",
+      "display_name": "扣子 Agent 协作",
+      "usage": "通过 Coze CLI 正确派发和接收 Agent 协作请求，避免消息循环。",
+      "example": "使用 $chinese-skills:coze-agent-collaboration 通过 Coze CLI 与项目中的其他 Agent 协作。",
+      "category": "开发与工具",
+      "source_area": "agents",
+      "source_skill_sha256": "dd82de03263fac86cc801d18f05186dd2feb37cc89563b633bfe43bd2111a5c2",
+      "license": null
+    },
+    {
+      "name": "find-skills",
+      "display_name": "技能发现与安装指引",
+      "usage": "寻找能完成用户需求的可安装技能，并提供适用范围及安装方式。",
+      "example": "使用 $chinese-skills:find-skills 找一个适合当前任务的技能。",
+      "category": "开发与工具",
+      "source_area": "agents",
+      "source_skill_sha256": "c00eeea0e13e74fe4a9d84ba0a8542205a1b736d65f13134fe1a6647eb14976f",
+      "license": null
+    },
+    {
+      "name": "frontend-design",
+      "display_name": "前端视觉设计",
+      "usage": "为新界面或重新设计的界面确定视觉方向、字体和具有辨识度的布局。",
+      "example": "使用 $chinese-skills:frontend-design 为这个页面设计清晰而有辨识度的视觉风格。",
+      "category": "网页设计",
+      "source_area": "agents",
+      "source_skill_sha256": "d91970639e9f5c37682ac7ab60094d35f1c7c1f38d731bd56396563aee10c1d3",
+      "license": "Complete terms in LICENSE.txt"
+    },
+    {
+      "name": "galaxy-ui",
+      "display_name": "Galaxy 中文 UI 组件库",
+      "usage": "从 3802 个本地组件中选择和适配按钮、卡片、表单、开关及加载动画。",
+      "example": "使用 $chinese-skills:galaxy-ui 挑选适合深色页面的发光按钮和产品卡片。",
+      "category": "网页设计",
+      "source_area": "codex",
+      "source_skill_sha256": "e3a3bc0f7a77488e909e0f6c74cd2a27e441341aa8784202111caa08cb2826ed",
+      "license": "MIT"
+    },
+    {
+      "name": "gongbei-completed-table-modifier",
+      "display_name": "已完成任务绩效表整理",
+      "usage": "批量整理绩效 Excel，按岗位保留分数，生成完成分和完成率并统一明细格式。",
+      "example": "使用 $chinese-skills:gongbei-completed-table-modifier 按人员岗位整理这些已完成任务绩效表。",
+      "category": "图像与办公",
+      "source_area": "codex",
+      "source_skill_sha256": "5dea1e973439cc69eb3a9491a1f124086cb2e05a79d126c6040f19007570010b",
+      "license": null
+    },
+    {
+      "name": "grill-me",
+      "display_name": "方案追问入口",
+      "usage": "通过连续追问澄清需求、计划和设计，调用完整的方案压力测试流程。",
+      "example": "使用 $chinese-skills:grill-me 通过追问帮我检查这个项目方案。",
+      "category": "协作与思考",
+      "source_area": "codex",
+      "source_skill_sha256": "caaf8b8de1684f96e26b28f3c29189db5c89cce4b73e1c93d86164f66ef88637",
+      "license": null
+    },
+    {
+      "name": "grilling",
+      "display_name": "方案与决策压力测试",
+      "usage": "持续追问计划、决策和想法，找出假设、遗漏和需要验证的问题。",
+      "example": "使用 $chinese-skills:grilling 深入追问我的方案，帮我找出薄弱环节。",
+      "category": "协作与思考",
+      "source_area": "codex",
+      "source_skill_sha256": "10ff989e7498b23b5acb49d5048f11dcd906757d2f79c5cdf8a00001381296f2",
+      "license": null
+    },
+    {
+      "name": "gsap-core",
+      "display_name": "GSAP 基础动画",
+      "usage": "创建网页移动、缩放、淡入淡出、缓动、错峰和响应式动画。",
+      "example": "使用 $chinese-skills:gsap-core 为页面添加流畅的入场动画并兼顾移动端。",
+      "category": "网页动画",
+      "source_area": "codex",
+      "source_skill_sha256": "7f51f0094741733c6d31ae2bd5fb2901f6b8aa710b3ed5d7adc79a62aa9aa609",
+      "license": "MIT"
+    },
+    {
+      "name": "gsap-frameworks",
+      "display_name": "GSAP Vue 与 Svelte 集成",
+      "usage": "在 Vue、Nuxt、Svelte 和 SvelteKit 中正确处理动画生命周期及清理。",
+      "example": "使用 $chinese-skills:gsap-frameworks 给 Vue 页面添加动画并在卸载时清理。",
+      "category": "网页动画",
+      "source_area": "codex",
+      "source_skill_sha256": "03ca14339705dc2ee85ac9c15b5398b5aa7b7b00966ba99e7edb48bf4fd1c261",
+      "license": "MIT"
+    },
+    {
+      "name": "gsap-performance",
+      "display_name": "GSAP 动画性能优化",
+      "usage": "排查动画卡顿、布局开销及滚动更新，进行最小必要优化。",
+      "example": "使用 $chinese-skills:gsap-performance 检查这段动画的卡顿原因并优化。",
+      "category": "网页动画",
+      "source_area": "codex",
+      "source_skill_sha256": "d47a8d81be4c1397d2083c5b2efb252024d42ab81c882dcac08cf5c0f1f591a5",
+      "license": "MIT"
+    },
+    {
+      "name": "gsap-plugins",
+      "display_name": "GSAP 插件与高级动效",
+      "usage": "使用文字拆分、SVG 绘制形变、拖拽、运动路径、Flip 和自定义缓动。",
+      "example": "使用 $chinese-skills:gsap-plugins 给标题添加文字拆分入场效果。",
+      "category": "网页动画",
+      "source_area": "codex",
+      "source_skill_sha256": "bffce2587fcacf9d1958c0c3014ce81dcd455e635d59bbc07e0f9985acf6a162",
+      "license": "MIT"
+    },
+    {
+      "name": "gsap-react",
+      "display_name": "GSAP React 动画集成",
+      "usage": "使用 useGSAP、ref 和 contextSafe 处理 React 动画作用域及组件卸载。",
+      "example": "使用 $chinese-skills:gsap-react 为 React 组件添加动画并处理卸载清理。",
+      "category": "网页动画",
+      "source_area": "codex",
+      "source_skill_sha256": "2a18b725b07327a01fa5b53e5212ee63c6a260819e89095629817cacbe120830",
+      "license": "MIT"
+    },
+    {
+      "name": "gsap-scrolltrigger",
+      "display_name": "GSAP 滚动交互动画",
+      "usage": "制作滚动驱动动画、视差、元素固定和分屏产品展示。",
+      "example": "使用 $chinese-skills:gsap-scrolltrigger 制作随滚动切换的分屏产品展示。",
+      "category": "网页动画",
+      "source_area": "codex",
+      "source_skill_sha256": "25dd948634012aec080eefaec7831a8dc151baf9d88721eecea3c0c398c6f11c",
+      "license": "MIT"
+    },
+    {
+      "name": "gsap-timeline",
+      "display_name": "GSAP 时间线编排",
+      "usage": "安排多个动画的顺序、重叠、标签、嵌套和播放控制。",
+      "example": "使用 $chinese-skills:gsap-timeline 编排标题、图片和按钮的连续入场动画。",
+      "category": "网页动画",
+      "source_area": "codex",
+      "source_skill_sha256": "f32c66f10e4ede71ff8eca2d35ddf9cf3797ec43ece8a5d6e90535b50458ac7a",
+      "license": "MIT"
+    },
+    {
+      "name": "gsap-utils",
+      "display_name": "GSAP 动画工具函数",
+      "usage": "处理动画数值映射、范围限制、插值、随机、吸附和选择器。",
+      "example": "使用 $chinese-skills:gsap-utils 把鼠标位置映射成卡片的有限旋转角度。",
+      "category": "网页动画",
+      "source_area": "codex",
+      "source_skill_sha256": "4f5bb1f378be0ec63795fc36fecf3000091e53424026d5794a98fd3b32a5784d",
+      "license": "MIT"
+    },
+    {
+      "name": "handoff",
+      "display_name": "聊天任务交接",
+      "usage": "把当前任务的目标、决定、进度和未完成事项整理为可继续执行的交接文档。",
+      "example": "使用 $chinese-skills:handoff 把当前任务整理成可交给下一位助手的交接文档。",
+      "category": "协作与思考",
+      "source_area": "codex",
+      "source_skill_sha256": "7c62de979fdc7ac32fb5ddb2146156c917f80ee070d30fadc9d40343c4b6ed25",
+      "license": null
+    },
+    {
+      "name": "hyperframes",
+      "display_name": "HyperFrames 视频制作入口",
+      "usage": "根据视频或动画需求选择 HyperFrames 工作流，继续制作、检查、预览及渲染。",
+      "example": "使用 $chinese-skills:hyperframes 制作一个介绍产品的视频，先确定工作流。",
+      "category": "视频与媒体",
+      "source_area": "agents",
+      "source_skill_sha256": "fa40d77b02b59685f6a4c68cb0a29d4bfcc057733939e9fb8213e23610c5f608",
+      "license": null
+    },
+    {
+      "name": "hyperframes-animation",
+      "display_name": "HyperFrames 动画编排",
+      "usage": "选择动画规则、场景蓝图、转场和运行时，制作可定位和重现的动画。",
+      "example": "使用 $chinese-skills:hyperframes-animation 为这段视频设计协调的场景动画和转场。",
+      "category": "视频与媒体",
+      "source_area": "agents",
+      "source_skill_sha256": "b35f1f8eff68e9ff480a5d5d343a1bf5a40ebb7d0d9be20b0b980cfdb36047f3",
+      "license": null
+    },
+    {
+      "name": "hyperframes-audio",
+      "display_name": "HyperFrames 音频混音",
+      "usage": "调整现有音轨的淡入淡出、音量、闪避、均衡、压缩及效果自动化。",
+      "example": "使用 $chinese-skills:hyperframes-audio 压低旁白出现时的背景音乐并添加淡入淡出。",
+      "category": "视频与媒体",
+      "source_area": "agents",
+      "source_skill_sha256": "03007db5f0ea61f093c401f681e30d686c4a490f7462c6fd34949722e881b278",
+      "license": null
+    },
+    {
+      "name": "hyperframes-cli",
+      "display_name": "HyperFrames 命令行工具",
+      "usage": "使用 HyperFrames CLI 初始化、检查、预览、渲染及诊断项目。",
+      "example": "使用 $chinese-skills:hyperframes-cli 检查这个 HyperFrames 项目并渲染视频。",
+      "category": "视频与媒体",
+      "source_area": "agents",
+      "source_skill_sha256": "0e7004fa07f48b0d268a3e89eb606161cc286159f06c5579cffcc04ff3f47ce2",
+      "license": null
+    },
+    {
+      "name": "hyperframes-core",
+      "display_name": "HyperFrames 合成结构",
+      "usage": "设置合成、轨道、子场景、时间属性及框架管理的媒体播放。",
+      "example": "使用 $chinese-skills:hyperframes-core 整理这个视频的场景、轨道和时间结构。",
+      "category": "视频与媒体",
+      "source_area": "agents",
+      "source_skill_sha256": "18ac7784765cc29af5a4d88f2a63a15deaf5395985009af188b5e3718edcfe3d",
+      "license": null
+    },
+    {
+      "name": "hyperframes-creative",
+      "display_name": "HyperFrames 视频创意设计",
+      "usage": "规划视频的视觉风格、配色、字体、叙事、节拍和构图。",
+      "example": "使用 $chinese-skills:hyperframes-creative 为产品介绍视频确定风格、叙事和画面设计。",
+      "category": "视频与媒体",
+      "source_area": "agents",
+      "source_skill_sha256": "9da7b7ac84c8d884b54125887ecca1a645a38337013082b96af2fdc0259c945a",
+      "license": null
+    },
+    {
+      "name": "hyperframes-keyframes",
+      "display_name": "HyperFrames 镜头与关键帧",
+      "usage": "制作缩放、重构图、推拉镜头、路径和可定位的二维或三维关键帧。",
+      "example": "使用 $chinese-skills:hyperframes-keyframes 给这个产品镜头添加平滑的推近和重构图。",
+      "category": "视频与媒体",
+      "source_area": "agents",
+      "source_skill_sha256": "d6484e8367ed522f2a89af9ec30ae3cd86ae243b5a23c5ab00a7a682e3d1a791",
+      "license": null
+    },
+    {
+      "name": "hyperframes-registry",
+      "display_name": "HyperFrames 素材组件注册表",
+      "usage": "搜索并接入现有视频组件、视觉效果和转场，减少重复实现。",
+      "example": "使用 $chinese-skills:hyperframes-registry 查找并接入适合这段视频的转场组件。",
+      "category": "视频与媒体",
+      "source_area": "agents",
+      "source_skill_sha256": "f1925b202cabd125b509658b11db593b55340b1926ecb056fc31aa4233a2b4f6",
+      "license": null
+    },
+    {
+      "name": "hyperframes-studio",
+      "display_name": "HyperFrames Studio 制作协作",
+      "usage": "组织视频计划、分镜、时间线和安全区域，配合使用者迭代 Studio 项目。",
+      "example": "使用 $chinese-skills:hyperframes-studio 整理这个视频的分镜和 Studio 时间线。",
+      "category": "视频与媒体",
+      "source_area": "agents",
+      "source_skill_sha256": "7449da3952155e40e7d76fc29d4415b4030ab6f7f3ff9c3b94fa1b159cad46c4",
+      "license": null
+    },
+    {
+      "name": "image2-apinebula",
+      "display_name": "APINebula 图片生成与编辑",
+      "usage": "使用本人配置的 APINebula API 密钥生成或编辑图片，并保存和预览结果。",
+      "example": "使用 $chinese-skills:image2-apinebula 用 APINebula 生成一张产品海报。",
+      "category": "图像与办公",
+      "source_area": "codex",
+      "source_skill_sha256": "a0ca9701bf5a4d31287e770ac10f7cd32f9fabc5b3669411bb883b237dba1005",
+      "license": null
+    },
+    {
+      "name": "kaoqin-tongji",
+      "display_name": "个人考勤月度汇总",
+      "usage": "汇总 Excel 考勤日报中的请假、迟到、加班和周末休息，输出人员统计及明细。",
+      "example": "使用 $chinese-skills:kaoqin-tongji 汇总这些个人考勤日报，生成月度统计表。",
+      "category": "图像与办公",
+      "source_area": "codex",
+      "source_skill_sha256": "a77e2288a8d3c8d2f335beb0038919f55c2025a65d8914ee6e01bc0a5b2c425a",
+      "license": null
+    },
+    {
+      "name": "media-use",
+      "display_name": "视频媒体素材与音频处理",
+      "usage": "寻找或生成音乐、音效、图像和配音，并管理字幕、媒体处理及素材记录。",
+      "example": "使用 $chinese-skills:media-use 为这段视频准备配音、字幕和背景音乐。",
+      "category": "视频与媒体",
+      "source_area": "agents",
+      "source_skill_sha256": "1fa35c3baa6d80080e76a99246b9849d5f57c0105800c1de5bbabed53f83ce1a",
+      "license": null
+    },
+    {
+      "name": "pcb-silkscreen-extraction",
+      "display_name": "PCB 白色丝印提取",
+      "usage": "从电路板照片中提取白色文字、符号和轮廓，保持原坐标并使用纯黑背景。",
+      "example": "使用 $chinese-skills:pcb-silkscreen-extraction 提取这张 PCB 照片上的白色丝印，保持原位置。",
+      "category": "图像与办公",
+      "source_area": "codex",
+      "source_skill_sha256": "0a0453e34a1494692f4854a92fb74f864552fce737bef479cf88b53732d65270",
+      "license": null
+    },
+    {
+      "name": "ponytail-code-optimization",
+      "display_name": "最小实现与代码优化",
+      "usage": "按最小正确修改原则编写、修复和重构代码，优先已有实现与标准库。",
+      "example": "使用 $chinese-skills:ponytail-code-optimization 用最小正确修改修复这个问题。",
+      "category": "开发与工具",
+      "source_area": "codex",
+      "source_skill_sha256": "00d4e91baa293948d28123edf4b08f16b6ddf8ffbf44eb83dc1d5e8afe99b4b1",
+      "license": "MIT"
+    },
+    {
+      "name": "teach",
+      "display_name": "项目知识教学",
+      "usage": "结合工作区和实际任务讲解新技能或概念，形成练习、术语和学习记录。",
+      "example": "使用 $chinese-skills:teach 结合这个项目教我理解它的核心技术。",
+      "category": "协作与思考",
+      "source_area": "codex",
+      "source_skill_sha256": "a32df9dcdfc0c4fdc1c98e1ed3940c5f56b84c1aa90ff60346f32b8b53915b43",
+      "license": null
+    },
+    {
+      "name": "to-questionnaire",
+      "display_name": "决策问卷整理",
+      "usage": "把尚缺信息的决策问题整理成可以交给他人填写的清晰问卷。",
+      "example": "使用 $chinese-skills:to-questionnaire 把这个决策需要确认的事项做成问卷。",
+      "category": "协作与思考",
+      "source_area": "codex",
+      "source_skill_sha256": "b5eb929842ee0e93d867c5e906d183d350f2f2d149eaeaa86967d94d8eda1d3b",
+      "license": null
+    },
+    {
+      "name": "ui-ux-pro-max",
+      "display_name": "UI/UX 设计知识库",
+      "usage": "搜索界面风格、配色、字体、交互、无障碍和技术栈指导，生成设计方案。",
+      "example": "使用 $chinese-skills:ui-ux-pro-max 为这个产品查找合适的配色、字体和界面方案。",
+      "category": "网页设计",
+      "source_area": "agents",
+      "source_skill_sha256": "b7678129c452f2235e150a51cfb3fe7594aec0fc314c718b1ed3a141cfcc4fa5",
+      "license": null
+    },
+    {
+      "name": "using-coze-cli",
+      "display_name": "扣子 CLI 项目与内容工具",
+      "usage": "使用 Coze CLI 创建或迭代项目、生成内容、操作会话及分享文件。",
+      "example": "使用 $chinese-skills:using-coze-cli 使用 Coze CLI 处理这个项目任务。",
+      "category": "开发与工具",
+      "source_area": "agents",
+      "source_skill_sha256": "ba4993096d150721af08b7dc9eb54322832f097f5df97adc26ba74009ead42d7",
+      "license": null
+    },
+    {
+      "name": "vercel-composition-patterns",
+      "display_name": "React 组件组合模式",
+      "usage": "通过组合组件、上下文和显式变体设计可扩展的 React 组件接口。",
+      "example": "使用 $chinese-skills:vercel-composition-patterns 改进这个 React 组件的组合方式，减少布尔属性。",
+      "category": "网页设计",
+      "source_area": "agents",
+      "source_skill_sha256": "e38e0eaa609316b10423a9a138ed95e35099accd3f735585295c8a8f165c28a3",
+      "license": "MIT"
+    },
+    {
+      "name": "wait-what",
+      "display_name": "重新解释与表达",
+      "usage": "在上一段说明未被理解时，换一种清晰易懂的方式重新讲解。",
+      "example": "使用 $chinese-skills:wait-what 重新解释刚才的内容，换一种容易理解的说法。",
+      "category": "协作与思考",
+      "source_area": "codex",
+      "source_skill_sha256": "e3f44e3ccbc0e7b62f20ba70b295fc9c9f4aa3f96c77168faee1c71bacbf4215",
+      "license": null
+    },
+    {
+      "name": "web-design-guidelines",
+      "display_name": "网页界面规范审查",
+      "usage": "依据网页界面规范检查 UI、交互、无障碍和设计一致性。",
+      "example": "使用 $chinese-skills:web-design-guidelines 审查这个网页的交互和无障碍问题。",
+      "category": "网页设计",
+      "source_area": "agents",
+      "source_skill_sha256": "f4647ca866a3accf763777f83e7682954f0187cd6bea7eea0399796652414e8f",
+      "license": null
+    },
+    {
+      "name": "writing-for-agents",
+      "display_name": "Agent 规则与技能文档编写",
+      "usage": "为助手编写技能、规则和参考文档，明确触发条件并减少无用上下文。",
+      "example": "使用 $chinese-skills:writing-for-agents 检查并改善这份技能文档的触发条件和执行说明。",
+      "category": "开发与工具",
+      "source_area": "codex",
+      "source_skill_sha256": "551adca942227b44192edba88acd4e8db911f0121ce58ad16944ccf6a896a74a",
+      "license": null
+    }
+  ],
+  "duplicate_names": [
+    "grill-me"
+  ],
+  "excluded_sources": [
+    "GPT/Codex built-in system skills",
+    "installed plugin cache skills"
+  ]
+}

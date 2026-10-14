@@ -1,0 +1,4 @@
+interface:
+  display_name: "HyperFrames 音频混音"
+  short_description: "调整现有音轨的淡入淡出、音量、闪避、均衡、压缩及效果自动化。"
+  default_prompt: "使用 $chinese-skills:hyperframes-audio 压低旁白出现时的背景音乐并添加淡入淡出。"

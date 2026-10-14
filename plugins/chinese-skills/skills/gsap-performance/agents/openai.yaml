@@ -1,0 +1,4 @@
+interface:
+  display_name: "GSAP 动画性能优化"
+  short_description: "排查动画卡顿、布局开销及滚动更新，进行最小必要优化。"
+  default_prompt: "使用 $chinese-skills:gsap-performance 检查这段动画的卡顿原因并优化。"

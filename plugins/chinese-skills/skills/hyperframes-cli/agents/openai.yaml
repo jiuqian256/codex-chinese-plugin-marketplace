@@ -1,0 +1,4 @@
+interface:
+  display_name: "HyperFrames 命令行工具"
+  short_description: "使用 HyperFrames CLI 初始化、检查、预览、渲染及诊断项目。"
+  default_prompt: "使用 $chinese-skills:hyperframes-cli 检查这个 HyperFrames 项目并渲染视频。"

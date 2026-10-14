@@ -1,0 +1,4 @@
+interface:
+  display_name: "PCB 白色丝印提取"
+  short_description: "从电路板照片中提取白色文字、符号和轮廓，保持原坐标并使用纯黑背景。"
+  default_prompt: "使用 $chinese-skills:pcb-silkscreen-extraction 提取这张 PCB 照片上的白色丝印，保持原位置。"

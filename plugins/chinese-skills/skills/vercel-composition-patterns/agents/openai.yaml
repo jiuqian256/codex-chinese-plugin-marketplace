@@ -1,0 +1,4 @@
+interface:
+  display_name: "React 组件组合模式"
+  short_description: "通过组合组件、上下文和显式变体设计可扩展的 React 组件接口。"
+  default_prompt: "使用 $chinese-skills:vercel-composition-patterns 改进这个 React 组件的组合方式，减少布尔属性。"

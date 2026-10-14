@@ -1,0 +1,4 @@
+interface:
+  display_name: "GSAP 滚动交互动画"
+  short_description: "制作滚动驱动动画、视差、元素固定和分屏产品展示。提供对应的执行与检查指导。"
+  default_prompt: "使用 $chinese-skills:gsap-scrolltrigger 制作随滚动切换的分屏产品展示。"

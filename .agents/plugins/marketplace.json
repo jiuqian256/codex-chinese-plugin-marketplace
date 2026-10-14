@@ -1,0 +1,20 @@
+{
+  "name": "chinese-skill-marketplace",
+  "interface": {
+    "displayName": "中文技能市场"
+  },
+  "plugins": [
+    {
+      "name": "chinese-skills",
+      "source": {
+        "source": "local",
+        "path": "./plugins/chinese-skills"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

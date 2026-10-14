@@ -1,0 +1,4 @@
+interface:
+  display_name: "视频媒体素材与音频处理"
+  short_description: "寻找或生成音乐、音效、图像和配音，并管理字幕、媒体处理及素材记录。"
+  default_prompt: "使用 $chinese-skills:media-use 为这段视频准备配音、字幕和背景音乐。"

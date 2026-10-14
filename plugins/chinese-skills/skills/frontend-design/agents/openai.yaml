@@ -1,0 +1,4 @@
+interface:
+  display_name: "前端视觉设计"
+  short_description: "为新界面或重新设计的界面确定视觉方向、字体和具有辨识度的布局。"
+  default_prompt: "使用 $chinese-skills:frontend-design 为这个页面设计清晰而有辨识度的视觉风格。"

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Agent 规则与技能文档编写"
+  short_description: "为助手编写技能、规则和参考文档，明确触发条件并减少无用上下文。"
+  default_prompt: "使用 $chinese-skills:writing-for-agents 检查并改善这份技能文档的触发条件和执行说明。"

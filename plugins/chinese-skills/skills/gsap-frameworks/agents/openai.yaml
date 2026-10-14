@@ -1,0 +1,4 @@
+interface:
+  display_name: "GSAP Vue 与 Svelte 集成"
+  short_description: "在 Vue、Nuxt、Svelte 和 SvelteKit 中正确处理动画生命周期及清理。"
+  default_prompt: "使用 $chinese-skills:gsap-frameworks 给 Vue 页面添加动画并在卸载时清理。"

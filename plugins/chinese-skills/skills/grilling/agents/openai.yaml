@@ -1,0 +1,4 @@
+interface:
+  display_name: "方案与决策压力测试"
+  short_description: "持续追问计划、决策和想法，找出假设、遗漏和需要验证的问题。"
+  default_prompt: "使用 $chinese-skills:grilling 深入追问我的方案，帮我找出薄弱环节。"

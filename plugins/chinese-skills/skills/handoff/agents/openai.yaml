@@ -1,0 +1,6 @@
+interface:
+  display_name: "聊天任务交接"
+  short_description: "把当前任务的目标、决定、进度和未完成事项整理为可继续执行的交接文档。"
+  default_prompt: "使用 $chinese-skills:handoff 把当前任务整理成可交给下一位助手的交接文档。"
+policy:
+  allow_implicit_invocation: !!bool "false"

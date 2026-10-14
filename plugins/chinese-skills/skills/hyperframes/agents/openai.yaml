@@ -1,0 +1,4 @@
+interface:
+  display_name: "HyperFrames 视频制作入口"
+  short_description: "根据视频或动画需求选择 HyperFrames 工作流，继续制作、检查、预览及渲染。"
+  default_prompt: "使用 $chinese-skills:hyperframes 制作一个介绍产品的视频，先确定工作流。"

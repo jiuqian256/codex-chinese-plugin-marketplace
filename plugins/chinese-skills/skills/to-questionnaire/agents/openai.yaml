@@ -1,0 +1,6 @@
+interface:
+  display_name: "决策问卷整理"
+  short_description: "把尚缺信息的决策问题整理成可以交给他人填写的清晰问卷。"
+  default_prompt: "使用 $chinese-skills:to-questionnaire 把这个决策需要确认的事项做成问卷。"
+policy:
+  allow_implicit_invocation: !!bool "false"

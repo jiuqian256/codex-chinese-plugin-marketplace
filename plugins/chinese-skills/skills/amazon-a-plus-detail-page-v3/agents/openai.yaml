@@ -1,0 +1,4 @@
+interface:
+  display_name: "亚马逊 A+ 详情页制作"
+  short_description: "根据白底产品照片规划并制作完整的亚马逊 A+ 详情页图片。"
+  default_prompt: "使用 $chinese-skills:amazon-a-plus-detail-page-v3 用这些产品照片制作亚马逊 A+ 详情页。"

@@ -1,0 +1,6 @@
+interface:
+  display_name: "重新解释与表达"
+  short_description: "在上一段说明未被理解时，换一种清晰易懂的方式重新讲解。"
+  default_prompt: "使用 $chinese-skills:wait-what 重新解释刚才的内容，换一种容易理解的说法。"
+policy:
+  allow_implicit_invocation: !!bool "false"

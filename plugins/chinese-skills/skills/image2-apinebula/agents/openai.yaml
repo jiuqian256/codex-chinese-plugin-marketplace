@@ -1,0 +1,4 @@
+interface:
+  display_name: "APINebula 图片生成与编辑"
+  short_description: "使用本人配置的 APINebula API 密钥生成或编辑图片，并保存和预览结果。"
+  default_prompt: "使用 $chinese-skills:image2-apinebula 用 APINebula 生成一张产品海报。"

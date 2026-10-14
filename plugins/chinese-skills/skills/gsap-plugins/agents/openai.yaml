@@ -1,0 +1,4 @@
+interface:
+  display_name: "GSAP 插件与高级动效"
+  short_description: "使用文字拆分、SVG 绘制形变、拖拽、运动路径、Flip 和自定义缓动。"
+  default_prompt: "使用 $chinese-skills:gsap-plugins 给标题添加文字拆分入场效果。"

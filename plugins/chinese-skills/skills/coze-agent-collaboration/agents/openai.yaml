@@ -1,0 +1,4 @@
+interface:
+  display_name: "扣子 Agent 协作"
+  short_description: "通过 Coze CLI 正确派发和接收 Agent 协作请求，避免消息循环。"
+  default_prompt: "使用 $chinese-skills:coze-agent-collaboration 通过 Coze CLI 与项目中的其他 Agent 协作。"

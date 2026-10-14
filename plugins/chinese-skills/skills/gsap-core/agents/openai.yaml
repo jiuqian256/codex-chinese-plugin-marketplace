@@ -1,0 +1,4 @@
+interface:
+  display_name: "GSAP 基础动画"
+  short_description: "创建网页移动、缩放、淡入淡出、缓动、错峰和响应式动画。"
+  default_prompt: "使用 $chinese-skills:gsap-core 为页面添加流畅的入场动画并兼顾移动端。"

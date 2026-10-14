@@ -1,0 +1,4 @@
+interface:
+  display_name: "个人考勤月度汇总"
+  short_description: "汇总 Excel 考勤日报中的请假、迟到、加班和周末休息，输出人员统计及明细。"
+  default_prompt: "使用 $chinese-skills:kaoqin-tongji 汇总这些个人考勤日报，生成月度统计表。"

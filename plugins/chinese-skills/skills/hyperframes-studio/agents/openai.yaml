@@ -1,0 +1,4 @@
+interface:
+  display_name: "HyperFrames Studio 制作协作"
+  short_description: "组织视频计划、分镜、时间线和安全区域，配合使用者迭代 Studio 项目。"
+  default_prompt: "使用 $chinese-skills:hyperframes-studio 整理这个视频的分镜和 Studio 时间线。"

@@ -1,0 +1,4 @@
+interface:
+  display_name: "UI/UX 设计知识库"
+  short_description: "搜索界面风格、配色、字体、交互、无障碍和技术栈指导，生成设计方案。"
+  default_prompt: "使用 $chinese-skills:ui-ux-pro-max 为这个产品查找合适的配色、字体和界面方案。"

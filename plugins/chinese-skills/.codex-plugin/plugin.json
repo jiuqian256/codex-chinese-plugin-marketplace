@@ -1,0 +1,24 @@
+{
+  "name": "chinese-skills",
+  "version": "1.0.0",
+  "description": "40 个独立安装的技能：网页设计、GSAP、视频媒体、图像办公、开发工具与任务协作。",
+  "author": {
+    "name": "jiuqian256"
+  },
+  "skills": "./skills/",
+  "homepage": "https://github.com/jiuqian256/codex-chinese-plugin-marketplace",
+  "repository": "https://github.com/jiuqian256/codex-chinese-plugin-marketplace",
+  "interface": {
+    "displayName": "中文技能全集（40 项）",
+    "shortDescription": "一次安装 40 项独立技能，附中文名称、用法和完整素材",
+    "longDescription": "包含已独立安装的 40 个技能，去重 grill-me；不包含 GPT/Codex 自带系统技能及插件随附技能。图像 API 密钥由使用者自行配置，原有第三方插件另行安装。",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "使用中文技能全集帮助我完成当前任务，并选择合适的技能。"
+    ]
+  }
+}

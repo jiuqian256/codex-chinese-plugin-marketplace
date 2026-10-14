@@ -1,0 +1,4 @@
+interface:
+  display_name: "HyperFrames 视频创意设计"
+  short_description: "规划视频的视觉风格、配色、字体、叙事、节拍和构图。"
+  default_prompt: "使用 $chinese-skills:hyperframes-creative 为产品介绍视频确定风格、叙事和画面设计。"

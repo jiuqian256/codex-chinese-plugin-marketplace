@@ -1,0 +1,4 @@
+interface:
+  display_name: "最小实现与代码优化"
+  short_description: "按最小正确修改原则编写、修复和重构代码，优先已有实现与标准库。"
+  default_prompt: "使用 $chinese-skills:ponytail-code-optimization 用最小正确修改修复这个问题。"

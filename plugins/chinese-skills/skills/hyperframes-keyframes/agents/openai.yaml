@@ -1,0 +1,4 @@
+interface:
+  display_name: "HyperFrames 镜头与关键帧"
+  short_description: "制作缩放、重构图、推拉镜头、路径和可定位的二维或三维关键帧。"
+  default_prompt: "使用 $chinese-skills:hyperframes-keyframes 给这个产品镜头添加平滑的推近和重构图。"

@@ -1,0 +1,4 @@
+interface:
+  display_name: "HyperFrames 素材组件注册表"
+  short_description: "搜索并接入现有视频组件、视觉效果和转场，减少重复实现。"
+  default_prompt: "使用 $chinese-skills:hyperframes-registry 查找并接入适合这段视频的转场组件。"

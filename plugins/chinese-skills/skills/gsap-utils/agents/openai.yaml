@@ -1,0 +1,4 @@
+interface:
+  display_name: "GSAP 动画工具函数"
+  short_description: "处理动画数值映射、范围限制、插值、随机、吸附和选择器。"
+  default_prompt: "使用 $chinese-skills:gsap-utils 把鼠标位置映射成卡片的有限旋转角度。"

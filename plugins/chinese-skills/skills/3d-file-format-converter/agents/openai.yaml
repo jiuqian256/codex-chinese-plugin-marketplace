@@ -1,0 +1,4 @@
+interface:
+  display_name: "3D 文件识别与格式转换"
+  short_description: "识别真实 3D 文件格式，选择 Blender、Rhino 等工具，保留文件名导出 OBJ 或 FBX。"
+  default_prompt: "使用 $chinese-skills:3d-file-format-converter 把这个 3D 文件转换成 OBJ 和 FBX，保留原文件名。"

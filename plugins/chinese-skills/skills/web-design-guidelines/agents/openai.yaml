@@ -1,0 +1,4 @@
+interface:
+  display_name: "网页界面规范审查"
+  short_description: "依据网页界面规范检查 UI、交互、无障碍和设计一致性。"
+  default_prompt: "使用 $chinese-skills:web-design-guidelines 审查这个网页的交互和无障碍问题。"

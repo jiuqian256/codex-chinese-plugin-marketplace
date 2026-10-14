@@ -1,0 +1,4 @@
+interface:
+  display_name: "GSAP React 动画集成"
+  short_description: "使用 useGSAP、ref 和 contextSafe 处理 React 动画作用域及组件卸载。"
+  default_prompt: "使用 $chinese-skills:gsap-react 为 React 组件添加动画并处理卸载清理。"

@@ -1,0 +1,4 @@
+interface:
+  display_name: "已完成任务绩效表整理"
+  short_description: "批量整理绩效 Excel，按岗位保留分数，生成完成分和完成率并统一明细格式。"
+  default_prompt: "使用 $chinese-skills:gongbei-completed-table-modifier 按人员岗位整理这些已完成任务绩效表。"

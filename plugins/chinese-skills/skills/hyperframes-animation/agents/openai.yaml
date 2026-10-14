@@ -1,0 +1,4 @@
+interface:
+  display_name: "HyperFrames 动画编排"
+  short_description: "选择动画规则、场景蓝图、转场和运行时，制作可定位和重现的动画。"
+  default_prompt: "使用 $chinese-skills:hyperframes-animation 为这段视频设计协调的场景动画和转场。"

@@ -1,0 +1,6 @@
+interface:
+  display_name: "方案追问入口"
+  short_description: "通过连续追问澄清需求、计划和设计，调用完整的方案压力测试流程。"
+  default_prompt: "使用 $chinese-skills:grill-me 通过追问帮我检查这个项目方案。"
+policy:
+  allow_implicit_invocation: !!bool "false"

@@ -1,0 +1,6 @@
+interface:
+  display_name: "项目知识教学"
+  short_description: "结合工作区和实际任务讲解新技能或概念，形成练习、术语和学习记录。"
+  default_prompt: "使用 $chinese-skills:teach 结合这个项目教我理解它的核心技术。"
+policy:
+  allow_implicit_invocation: !!bool "false"

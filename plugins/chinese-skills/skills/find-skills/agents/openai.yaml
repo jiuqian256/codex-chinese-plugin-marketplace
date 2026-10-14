@@ -1,0 +1,4 @@
+interface:
+  display_name: "技能发现与安装指引"
+  short_description: "寻找能完成用户需求的可安装技能，并提供适用范围及安装方式。"
+  default_prompt: "使用 $chinese-skills:find-skills 找一个适合当前任务的技能。"

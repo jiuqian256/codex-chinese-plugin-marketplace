@@ -1,0 +1,4 @@
+interface:
+  display_name: "HyperFrames 合成结构"
+  short_description: "设置合成、轨道、子场景、时间属性及框架管理的媒体播放。"
+  default_prompt: "使用 $chinese-skills:hyperframes-core 整理这个视频的场景、轨道和时间结构。"
