@@ -26,3 +26,8 @@
 - gorden-ppt-skill：代码采用 MIT；templates/ 中的第三方模板和预览受原 NOTICE.md 的非商用限制。原版权归模板作者，仓库维护者无法授予模板商用权；完整保留该 NOTICE 和模板内作者信息。市场副本采用固定快照，通过市场更新版本，不在日常使用时自动覆盖安装缓存。
 
 本版本将非秘密环境变量示例保存为 env.example；不会分发包含使用者凭据的 .env 文件。除了名称、中文说明、路径和宿主适配外，保持实际实现及所附素材的来源信息。
+
+## v1.02 新增内容
+
+- REA / reverse-engineer-anything：来自 <https://github.com/morluto/rea>，官方发布 `rea-agents-6.5.0`，提交 `3b79af28e80785afce9f5998d8f03289402a1847`。REA 自行编写的代码与技能采用 MIT，原 LICENSE、DISCLAIMER.md 与 THIRD_PARTY_NOTICES.md 保留在技能目录。
+- 本市场添加中文名称、用途和调用示例，将运行命令与文档固定到 6.5.0，并附 MCP 配置及跨平台 npx 启动器。运行时由 npm 获取官方固定包；未复制商业分析工具、授权凭据或本机运行缓存。第三方工具与依赖保留各自许可。

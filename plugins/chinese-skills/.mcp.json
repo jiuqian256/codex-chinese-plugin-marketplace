@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "rea": {
+      "command": "node",
+      "args": [
+        "-e",
+        "// Launch the same pinned REA MCP package on Windows, macOS, and Linux.\nconst { spawn } = require(\"node:child_process\");\nconst windows = process.platform === \"win32\";\nconst args = [\"--yes\", \"--ignore-scripts\", \"--omit=optional\", \"rea-agents@6.5.0\", \"mcp\"];\nconst child = windows\n  ? spawn(\"cmd.exe\", [\"/d\", \"/c\", \"npx\", ...args], { stdio: \"inherit\", windowsHide: true })\n  : spawn(\"npx\", args, { stdio: \"inherit\" });\nchild.on(\"error\", (error) => { process.stderr.write(`REA MCP launch failed: ${error.message}\\n`); process.exitCode = 1; });\nchild.on(\"exit\", (code) => { process.exitCode = code === null ? 1 : code; });\n"
+      ],
+      "startup_timeout_sec": 120,
+      "tool_timeout_sec": 300
+    }
+  }
+}

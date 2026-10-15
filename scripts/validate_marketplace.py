@@ -20,12 +20,12 @@ def validate(root=ROOT):
     assert plugin.is_relative_to(root) and plugin.is_dir()
     manifest = json.loads((plugin / '.codex-plugin/plugin.json').read_text(encoding='utf-8'))
     assert manifest['name'] == entry['name'] == 'chinese-skills'
-    assert manifest['version'] == catalog['version'] == '1.0.1' and manifest['skills'] == './skills/'
-    assert catalog['release_tag'] == 'v1.01'
+    assert manifest['version'] == catalog['version'] == '1.0.2' and manifest['skills'] == './skills/'
+    assert catalog['release_tag'] == 'v1.02'
     assert re.search(r'[\u4e00-\u9fff]', manifest['interface']['displayName'])
     names = {s['name'] for s in catalog['skills']}
     skills = plugin / 'skills'
-    assert catalog['skill_count'] == len(names) == len(catalog['skills']) == 48
+    assert catalog['skill_count'] == len(names) == len(catalog['skills']) == 49
     assert names == {p.name for p in skills.iterdir() if p.is_dir()}
     for name in names:
         folder = skills / name
@@ -67,6 +67,20 @@ def validate(root=ROOT):
         provenance = json.loads((folder / 'UPSTREAM.json').read_text(encoding='utf-8'))
         assert provenance['name'] == name and re.fullmatch(r'[a-f0-9]{40}', provenance['commit'])
         assert (folder / 'LICENSE').is_file(), name + ': missing upstream license'
+    rea = skills / 'reverse-engineer-anything'
+    provenance = json.loads((rea / 'UPSTREAM.json').read_text(encoding='utf-8'))
+    assert provenance['repository'] == 'morluto/rea'
+    assert provenance['commit'] == '3b79af28e80785afce9f5998d8f03289402a1847'
+    assert (rea / 'LICENSE').is_file() and (rea / 'THIRD_PARTY_NOTICES.md').is_file()
+    assert manifest['mcpServers'] == './.mcp.json'
+    mcp = json.loads((plugin / '.mcp.json').read_text(encoding='utf-8'))['mcpServers']
+    assert set(mcp) == {'rea'}
+    assert mcp['rea']['command'] == 'node'
+    assert mcp['rea']['args'][0] == '-e' and len(mcp['rea']['args']) == 2
+    assert mcp['rea']['startup_timeout_sec'] >= 30
+    launcher = mcp['rea']['args'][1]
+    assert '${PLUGIN_ROOT}' not in launcher and 'process.platform' in launcher
+    assert 'rea-agents@6.5.0' in launcher and '@latest' not in launcher
     assert (skills / 'gorden-ppt-skill/NOTICE.md').is_file()
     assert 'non-commercial' in (skills / 'gorden-ppt-skill/NOTICE.md').read_text(encoding='utf-8').lower()
     for name in ('create-slide', 'create-theme', 'current-slide', 'apply-comments', 'slide-authoring'):

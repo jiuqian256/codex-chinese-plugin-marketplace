@@ -1,8 +1,8 @@
 # 中文技能市场
 
-一个可添加到 Codex 的公开插件市场。市场提供 **中文技能全集（48 项）** 插件，一次安装 48 个独立技能，附中文名称、用途和调用示例。
+一个可添加到 Codex 的公开插件市场。市场提供 **中文技能全集（49 项）** 插件，一次安装 49 个独立技能，附中文名称、用途和调用示例。
 
-当前发布标签为 **v1.01**，插件内部版本为 **1.0.1**。
+当前发布标签为 **v1.02**，插件内部版本为 **1.0.2**。
 
 仓库地址：<https://github.com/jiuqian256/codex-chinese-plugin-marketplace>
 
@@ -14,7 +14,7 @@
    https://github.com/jiuqian256/codex-chinese-plugin-marketplace
    ```
 
-2. 选择同步，打开 **中文技能市场**，安装 **中文技能全集（48 项）**。
+2. 选择同步，打开 **中文技能市场**，安装 **中文技能全集（49 项）**。
 3. 在新聊天中使用技能。若客户端未立即显示新市场，重启客户端后再查看插件目录。
 
 仓库当前为公开状态，其他使用者可以直接添加该地址。如果网络环境无法同步 GitHub，可以使用下方本地解压安装方式。
@@ -55,7 +55,7 @@ codex plugin add chinese-skills@chinese-skill-marketplace
 
 ## 技能范围与用法
 
-- 保留原有 40 个独立技能；`grill-me` 的两个相同副本只保留一份。v1.01 新增 8 个 PPT 与演示技能，共 48 项。
+- 保留原有 40 个独立技能；`grill-me` 的两个相同副本只保留一份。v1.01 新增 8 个 PPT 与演示技能，v1.02 新增 REA 逆向分析技能，共 49 项。
 - **不包含 GPT/Codex 自带的系统技能**。
 - **不包含已有插件缓存里的技能**；Figma、Remotion 等原有插件另行安装。
 - 从独立目录安装的 HyperFrames 系列技能属于本合集；它们仍需要 HyperFrames 运行时及相关外部工具。
@@ -109,7 +109,7 @@ APINebula 工具的 Python 依赖列在对应技能的 requirements.txt 中。�
 python scripts/validate_marketplace.py
 ```
 
-该检查验证目录、相对路径、48 个技能入口、中文信息、上游来源与许可、组件素材和分享包中常见的凭据形状。它不会调用收费服务，不等于对每个外部软件和 API 的实际业务验收。
+该检查验证目录、相对路径、49 个技能入口、中文信息、上游来源与许可、组件素材和分享包中常见的凭据形状。它不会调用收费服务，不等于对每个外部软件和 API 的实际业务验收。
 
 ## v1.01 新增来源
 
@@ -129,3 +129,19 @@ python scripts/validate_marketplace.py
 现有技能的上游许可和版权声明保持原样。合集不重新授权第三方内容，详见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
 
 官方格式参考：[插件打包与市场格式](https://developers.openai.com/plugins/build/plugins)、[CLI 插件命令](https://learn.chatgpt.com/docs/cli/reference#codex-plugin)。
+
+## v1.02：REA 逆向分析
+
+新增「REA 软件与二进制逆向分析」（`reverse-engineer-anything`），来源为 [morluto/rea](https://github.com/morluto/rea)，固定官方发布 `rea-agents-6.5.0`，采用 MIT 许可，保留原免责声明和第三方声明。
+
+插件在 `.mcp.json` 内附跨平台启动命令，使用 `npx --yes --ignore-scripts --omit=optional rea-agents@6.5.0 mcp` 启动本地 MCP。安装后重启或重连宿主，在新聊天中加载。运行需要 Node.js 22.x >=22.19、24.x >=24.11 或 26+，以及 npm；首次启动需要访问 npm 下载固定包。启动器不含个人路径、密钥或模型服务凭据。
+
+```text
+使用 $chinese-skills:reverse-engineer-anything 分析我提供的 Electron 应用包，解释搜索功能并给出证据。
+```
+
+REA 可以分析分发的软件包、JavaScript/Electron 应用、.NET 程序集等，并返回可核查证据。普通完整源码仓库的阅读仍使用常规开发工具。静态 JavaScript 分析不需要 Hopper 或 Ghidra；深度原生反编译按需连接用户已有的 Ghidra、IDA 或受支持的 Hopper。其他能力依照上游目标类型选择外部工具，插件不自动安装这些分析引擎。
+
+若仅使用独立技能且宿主尚未接入 MCP，可通过 `npx -y --ignore-scripts --omit=optional rea-agents@6.5.0 analyze-javascript-application <应用目录或ASAR绝对路径> --json` 使用 CLI。插件已连接 REA 时直接使用工具，不重复运行 setup 创建额外全局注册。分析你拥有或获准检查的软件，并保留结论的证据和限制。
+
+本版 MCP 启动器跳过 npm 安装脚本与可选 Frida 包，避免首次启动卡在原生依赖下载。已验证静态分析与 MCP 核心服务；依赖 Frida 的动态注入能力需要另行配置 Frida。

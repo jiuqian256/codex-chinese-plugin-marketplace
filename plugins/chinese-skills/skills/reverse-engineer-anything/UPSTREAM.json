@@ -1,0 +1,17 @@
+{
+  "name": "reverse-engineer-anything",
+  "upstream_skill_name": "reverse-engineer-anything",
+  "repository": "morluto/rea",
+  "commit": "3b79af28e80785afce9f5998d8f03289402a1847",
+  "ref": "rea-agents-6.5.0",
+  "path": ".agents/skills/reverse-engineer-anything",
+  "license": "MIT",
+  "runtime_package": "rea-agents@6.5.0",
+  "upstream_skill_sha256": "278a5826b004ebd33b83c9534f3081d8e4c0eae514be96a0124ceb6f3081d21c",
+  "adaptations": [
+    "添加中文名称、用途和命名空间调用示例",
+    "固定运行命令与文档链接到官方 6.5.0",
+    "补充插件 MCP 与独立技能的使用区别",
+    "npm 启动跳过安装脚本与可选 Frida，保留动态功能的外部依赖说明"
+  ]
+}

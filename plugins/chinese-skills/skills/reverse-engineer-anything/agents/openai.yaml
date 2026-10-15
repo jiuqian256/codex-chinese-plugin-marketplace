@@ -1,0 +1,4 @@
+interface:
+  display_name: "REA 软件与二进制逆向分析"
+  short_description: "分析软件、二进制与 Electron 应用，追踪功能并给出可核查证据"
+  default_prompt: "使用 $chinese-skills:reverse-engineer-anything 分析我提供的应用包，解释指定功能并给出证据。"

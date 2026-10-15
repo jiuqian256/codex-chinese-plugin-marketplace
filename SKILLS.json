@@ -1,6 +1,6 @@
 {
-  "version": "1.0.1",
-  "skill_count": 48,
+  "version": "1.0.2",
+  "skill_count": 49,
   "skills": [
     {
       "name": "3d-file-format-converter",
@@ -497,6 +497,19 @@
       "license": "MIT source; non-commercial templates",
       "repository": "GordenSun/GordenPPTSkill",
       "commit": "7d4a61cbd8363b92e4a30784f8ca460a0a2b0a33"
+    },
+    {
+      "name": "reverse-engineer-anything",
+      "display_name": "REA 软件与二进制逆向分析",
+      "usage": "分析软件、二进制、JavaScript/Electron 包和 .NET 程序集，追踪功能、比较版本并给出证据；原生反编译按需使用已有引擎。",
+      "example": "使用 $chinese-skills:reverse-engineer-anything 分析我提供的 Electron 应用包，解释搜索功能并给出证据。",
+      "category": "逆向分析与开发工具",
+      "source_area": "github",
+      "source_skill_sha256": "278a5826b004ebd33b83c9534f3081d8e4c0eae514be96a0124ceb6f3081d21c",
+      "license": "MIT",
+      "repository": "morluto/rea",
+      "commit": "3b79af28e80785afce9f5998d8f03289402a1847",
+      "runtime_package": "rea-agents@6.5.0"
     }
   ],
   "duplicate_names": [
@@ -506,5 +519,5 @@
     "GPT/Codex built-in system skills",
     "installed plugin cache skills"
   ],
-  "release_tag": "v1.01"
+  "release_tag": "v1.02"
 }
