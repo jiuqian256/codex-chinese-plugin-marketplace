@@ -1,0 +1,14 @@
+{
+  "name": "shanze-c4d-plugin-dev",
+  "source": "locally-authored skill",
+  "author": "jiuqian256",
+  "original_skill_sha256": "51c78496f1f850ab241add3d127146422afd19053f1581cca701965240c3ffe6",
+  "license": null,
+  "adaptation": [
+    "Plugin namespaced invocation",
+    "Portable registry source path selection",
+    "Remove private workstation locations",
+    "No registry server code, plugin packages or credentials bundled"
+  ],
+  "created_date": "2026-10-27"
+}

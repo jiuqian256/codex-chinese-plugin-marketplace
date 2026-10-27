@@ -20,12 +20,12 @@ def validate(root=ROOT):
     assert plugin.is_relative_to(root) and plugin.is_dir()
     manifest = json.loads((plugin / '.codex-plugin/plugin.json').read_text(encoding='utf-8'))
     assert manifest['name'] == entry['name'] == 'chinese-skills'
-    assert manifest['version'] == catalog['version'] == '1.0.2' and manifest['skills'] == './skills/'
-    assert catalog['release_tag'] == 'v1.02'
+    assert manifest['version'] == catalog['version'] == '1.0.3' and manifest['skills'] == './skills/'
+    assert catalog['release_tag'] == 'v1.03'
     assert re.search(r'[\u4e00-\u9fff]', manifest['interface']['displayName'])
     names = {s['name'] for s in catalog['skills']}
     skills = plugin / 'skills'
-    assert catalog['skill_count'] == len(names) == len(catalog['skills']) == 49
+    assert catalog['skill_count'] == len(names) == len(catalog['skills']) == 50
     assert names == {p.name for p in skills.iterdir() if p.is_dir()}
     for name in names:
         folder = skills / name

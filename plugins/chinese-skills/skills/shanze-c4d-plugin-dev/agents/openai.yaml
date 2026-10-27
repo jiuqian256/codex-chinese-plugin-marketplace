@@ -1,0 +1,6 @@
+interface:
+  display_name: "山泽 C4D 插件开发标准"
+  short_description: "按山泽插件库标准开发 C4D 插件，生成可上传 ZIP 并完成本地兼容性预检"
+  default_prompt: "使用 $chinese-skills:shanze-c4d-plugin-dev 开发或更新 C4D 插件，并交付通过山泽插件库上传预检的 ZIP。"
+policy:
+  allow_implicit_invocation: true

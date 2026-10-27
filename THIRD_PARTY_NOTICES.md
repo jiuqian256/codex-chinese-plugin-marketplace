@@ -31,3 +31,7 @@
 
 - REA / reverse-engineer-anything：来自 <https://github.com/morluto/rea>，官方发布 `rea-agents-6.5.0`，提交 `3b79af28e80785afce9f5998d8f03289402a1847`。REA 自行编写的代码与技能采用 MIT，原 LICENSE、DISCLAIMER.md 与 THIRD_PARTY_NOTICES.md 保留在技能目录。
 - 本市场添加中文名称、用途和调用示例，将运行命令与文档固定到 6.5.0，并附 MCP 配置及跨平台 npx 启动器。运行时由 npm 获取官方固定包；未复制商业分析工具、授权凭据或本机运行缓存。第三方工具与依赖保留各自许可。
+
+## v1.03 新增内容
+
+山泽 C4D 插件开发标准由本市场维护者在本机创作，根据自有插件库 README 和校验实现整理；本次分享技能说明、入口模板和预检脚本，不分发目标公司的插件库服务端或发布数据。来源与适配记录见该技能 UPSTREAM.json，未为其另行指定统一许可。原有第三方技能、许可与声明保持不变。

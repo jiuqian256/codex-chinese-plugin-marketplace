@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "replace-me",
+  "name": "示例工具 · 选中对象标记",
+  "version": "1.0.0",
+  "author": "内部研发",
+  "description": "给选中对象追加名称标记；请替换为真实功能与输入要求",
+  "kind": "python",
+  "command_id": null,
+  "min_c4d": 2026400,
+  "max_c4d": 2026400,
+  "entry": "entry.py",
+  "callable": "execute"
+}

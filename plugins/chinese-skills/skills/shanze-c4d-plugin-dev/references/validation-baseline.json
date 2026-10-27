@@ -1,0 +1,14 @@
+{
+  "registry_version": "0.2.0",
+  "checked_date": "2026-10-27",
+  "source_root": "<target-registry-source-root>",
+  "files": {
+    "README.md": "38597daa25d841688a86ee15b36ec3896b50654cb1ff1228e29039c36765061c",
+    "CompanyPluginManager/pm_core.py": "20e1c1d75ad0c04154f2af923ae6d34d5bf8b9a79587f0b04f64d77ef33553c9",
+    "CompanyPluginManager/pm_c4d.py": "b218ba32cdc0f7b003ed1f5a53c1da37cde299a284f984246b64d2180b25e503",
+    "CompanyPluginManager/pm_updates.py": "ed4cb71e4a3813bcf53b9614bf3f604915b412ed3bf71a00b8e35db0e8d947a6",
+    "server/server.py": "3d70e60f083673a4040040e653a4245635ddbbc59df2059693bdb14284de2379",
+    "tools/package_plugin.py": "aea59beedc8fb8cc70ee754da3817ad5dd6486491da206decccab08c1d8ecd43"
+  },
+  "note": "Hashes identify the implementation read when authoring. Recheck target deployment rules before new development."
+}

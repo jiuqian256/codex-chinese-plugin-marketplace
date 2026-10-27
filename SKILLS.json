@@ -1,6 +1,6 @@
 {
-  "version": "1.0.2",
-  "skill_count": 49,
+  "version": "1.0.3",
+  "skill_count": 50,
   "skills": [
     {
       "name": "3d-file-format-converter",
@@ -510,6 +510,16 @@
       "repository": "morluto/rea",
       "commit": "3b79af28e80785afce9f5998d8f03289402a1847",
       "runtime_package": "rea-agents@6.5.0"
+    },
+    {
+      "name": "shanze-c4d-plugin-dev",
+      "display_name": "山泽 C4D 插件开发标准",
+      "usage": "按山泽插件库标准开发、更新和打包 C4D 插件，提供 Python 模板及本地上传格式与安装预检。",
+      "example": "使用 $chinese-skills:shanze-c4d-plugin-dev 开发一个 C4D 插件，并交付通过上传预检的 ZIP。",
+      "category": "开发与工具",
+      "source_area": "codex",
+      "source_skill_sha256": "51c78496f1f850ab241add3d127146422afd19053f1581cca701965240c3ffe6",
+      "license": null
     }
   ],
   "duplicate_names": [
@@ -519,5 +529,5 @@
     "GPT/Codex built-in system skills",
     "installed plugin cache skills"
   ],
-  "release_tag": "v1.02"
+  "release_tag": "v1.03"
 }
