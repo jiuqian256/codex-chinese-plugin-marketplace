@@ -1,0 +1,4 @@
+interface:
+  display_name: "网站设计风格提取"
+  short_description: "从线上网站采集 DOM 与实测 CSS，由当前 Agent 生成结构化 DESIGN.md；截图可选，无需额外模型 API Key。"
+  default_prompt: "使用 $chinese-skills:get-web-design 提取这个网站的设计风格，生成中文 DESIGN.md 并标注实测来源。"

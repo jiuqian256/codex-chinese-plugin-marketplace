@@ -1,0 +1,4 @@
+interface:
+  display_name: "Apple 跨平台界面设计评审"
+  short_description: "依据 Apple HIG 评审移动与桌面界面，检查可访问性、导航、排版、深色模式及 Liquid Glass，适用于原生与跨平台应用。"
+  default_prompt: "使用 $chinese-skills:apple-design 评审这个应用的界面，按 Apple HIG 给出问题、依据和改进建议。"

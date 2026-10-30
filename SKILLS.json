@@ -1,6 +1,6 @@
 {
-  "version": "1.0.3",
-  "skill_count": 50,
+  "version": "1.0.4",
+  "skill_count": 52,
   "skills": [
     {
       "name": "3d-file-format-converter",
@@ -520,6 +520,30 @@
       "source_area": "codex",
       "source_skill_sha256": "51c78496f1f850ab241add3d127146422afd19053f1581cca701965240c3ffe6",
       "license": null
+    },
+    {
+      "name": "apple-design",
+      "repository": "dickwu/apple-design-skill",
+      "commit": "ff4ebddf0488598723a82bfdce1afb04de0b1c44",
+      "display_name": "Apple 跨平台界面设计评审",
+      "usage": "依据 Apple HIG 评审移动与桌面界面，检查可访问性、导航、排版、深色模式及 Liquid Glass，适用于原生与跨平台应用。",
+      "example": "使用 $chinese-skills:apple-design 评审这个应用的界面，按 Apple HIG 给出问题、依据和改进建议。",
+      "license": null,
+      "category": "网页与界面设计",
+      "source_area": "github",
+      "source_skill_sha256": "55b47d4d93a366206bd8efea519fd78b6f4a4e5f66900f2fcff7ddac7a82e8fa"
+    },
+    {
+      "name": "get-web-design",
+      "repository": "liaocaoxuezhe/get-web-design",
+      "commit": "abc816f54338b7abe531982ccceb6e56c0a56686",
+      "display_name": "网站设计风格提取",
+      "usage": "从线上网站采集 DOM 与实测 CSS，由当前 Agent 生成结构化 DESIGN.md；截图可选，无需额外模型 API Key。",
+      "example": "使用 $chinese-skills:get-web-design 提取这个网站的设计风格，生成中文 DESIGN.md 并标注实测来源。",
+      "license": "MIT (declared in upstream README; no standalone license file)",
+      "category": "网页与界面设计",
+      "source_area": "github",
+      "source_skill_sha256": "6baa60cd298e9860436043c07fc52abd669d7c740a09c6b97e7ecac716b3010e"
     }
   ],
   "duplicate_names": [
@@ -529,5 +553,5 @@
     "GPT/Codex built-in system skills",
     "installed plugin cache skills"
   ],
-  "release_tag": "v1.03"
+  "release_tag": "v1.0.4"
 }

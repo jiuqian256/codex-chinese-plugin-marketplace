@@ -1,0 +1,13 @@
+{
+  "name": "apple-design",
+  "upstream_skill_name": "apple-design",
+  "repository": "dickwu/apple-design-skill",
+  "commit": "ff4ebddf0488598723a82bfdce1afb04de0b1c44",
+  "path": ".",
+  "license": null,
+  "upstream_skill_sha256": "55b47d4d93a366206bd8efea519fd78b6f4a4e5f66900f2fcff7ddac7a82e8fa",
+  "adaptations": [
+    "添加中文名称、用途及插件命名空间调用示例",
+    "保留上游正文、脚本和全部参考资源，使用固定提交快照"
+  ]
+}

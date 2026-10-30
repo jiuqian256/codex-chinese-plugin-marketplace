@@ -1,0 +1,13 @@
+{
+  "name": "get-web-design",
+  "upstream_skill_name": "get-web-design",
+  "repository": "liaocaoxuezhe/get-web-design",
+  "commit": "abc816f54338b7abe531982ccceb6e56c0a56686",
+  "path": ".",
+  "license": "MIT (declared in upstream README; no standalone license file)",
+  "upstream_skill_sha256": "6baa60cd298e9860436043c07fc52abd669d7c740a09c6b97e7ecac716b3010e",
+  "adaptations": [
+    "添加中文名称、用途及插件命名空间调用示例",
+    "保留上游正文、脚本和全部参考资源，使用固定提交快照"
+  ]
+}

@@ -1,8 +1,8 @@
 # 中文技能市场
 
-一个可添加到 Codex 的公开插件市场。市场提供 **中文技能全集（50 项）** 插件，一次安装 50 个独立技能，附中文名称、用途和调用示例。
+一个可添加到 Codex 的公开插件市场。市场提供 **中文技能全集（52 项）** 插件，一次安装 52 个独立技能，附中文名称、用途和调用示例。
 
-当前发布标签为 **v1.03**，插件内部版本为 **1.0.3**。
+当前发布标签为 **v1.0.4**，插件内部版本为 **1.0.4**。
 
 仓库地址：<https://github.com/jiuqian256/codex-chinese-plugin-marketplace>
 
@@ -14,7 +14,7 @@
    https://github.com/jiuqian256/codex-chinese-plugin-marketplace
    ```
 
-2. 选择同步，打开 **中文技能市场**，安装 **中文技能全集（50 项）**。
+2. 选择同步，打开 **中文技能市场**，安装 **中文技能全集（52 项）**。
 3. 在新聊天中使用技能。若客户端未立即显示新市场，重启客户端后再查看插件目录。
 
 仓库当前为公开状态，其他使用者可以直接添加该地址。如果网络环境无法同步 GitHub，可以使用下方本地解压安装方式。
@@ -55,7 +55,7 @@ codex plugin add chinese-skills@chinese-skill-marketplace
 
 ## 技能范围与用法
 
-- 保留原有 40 个独立技能；`grill-me` 的两个相同副本只保留一份。v1.01 新增 8 个 PPT 与演示技能，v1.02 新增 REA 逆向分析技能，v1.03 新增山泽 C4D 插件开发标准，共 50 项。
+- 保留原有 40 个独立技能；`grill-me` 的两个相同副本只保留一份。v1.01 新增 8 个 PPT 与演示技能，v1.02 新增 REA 逆向分析技能，v1.03 新增山泽 C4D 插件开发标准，共 50 项；v1.0.4 新增 Apple 设计评审与网站设计风格提取，共 52 项。
 - **不包含 GPT/Codex 自带的系统技能**。
 - **不包含已有插件缓存里的技能**；Figma、Remotion 等原有插件另行安装。
 - 从独立目录安装的 HyperFrames 系列技能属于本合集；它们仍需要 HyperFrames 运行时及相关外部工具。
@@ -109,7 +109,7 @@ APINebula 工具的 Python 依赖列在对应技能的 requirements.txt 中。�
 python scripts/validate_marketplace.py
 ```
 
-该检查验证目录、相对路径、50 个技能入口、中文信息、上游来源与许可、组件素材和分享包中常见的凭据形状。它不会调用收费服务，不等于对每个外部软件和 API 的实际业务验收。
+该检查验证目录、相对路径、52 个技能入口、中文信息、上游来源与许可、组件素材和分享包中常见的凭据形状。它不会调用收费服务，不等于对每个外部软件和 API 的实际业务验收。
 
 ## v1.01 新增来源
 
@@ -155,3 +155,19 @@ REA 可以分析分发的软件包、JavaScript/Electron 应用、.NET 程序集
 ```
 
 预检需要 Python 3.11+ 和使用者提供的目标山泽插件库源码（通过 `--registry-root` 指定）；C4D 功能验收需要相应版本的 Cinema 4D。该市场只分享技能和模板，不含公司插件服务端、工具包或发布密码。预检在本地临时目录运行，不执行待上传插件，也不自动上传；格式预检与 C4D 实际运行、菜单注册分开验证。所有路径由使用者按自己的环境填写。
+
+## v1.0.4：Apple 设计评审与网站设计风格提取
+
+新增两个技能，中文技能全集从 50 项增加至 52 项，插件版本为 1.0.4，发布标签为 v1.0.4。
+
+| 技能 | 上游 | 用途与依赖 |
+|---|---|---|
+| `apple-design` | [dickwu/apple-design-skill](https://github.com/dickwu/apple-design-skill) | 基于 Apple HIG 的移动与桌面 UI 评审，附参考文档快照。审阅无需运行抓取脚本；主动刷新参考资料时需 Node.js 18+ 与网络 |
+| `get-web-design` | [liaocaoxuezhe/get-web-design](https://github.com/liaocaoxuezhe/get-web-design) | 从 DOM/CSS 证据生成 DESIGN.md；需 Python 3.9+、支持页面 JavaScript 执行的浏览器工具。截图可选，无需额外 API Key |
+
+```text
+使用 $chinese-skills:apple-design 评审这个应用的界面，按 Apple HIG 给出问题、依据和改进建议。
+使用 $chinese-skills:get-web-design 提取这个网站的设计风格，生成中文 DESIGN.md 并标注实测来源。
+```
+
+两个技能的完整配套资源及固定提交记录随包保留，来源见各自 UPSTREAM.json。Apple 参考文本归 Apple Inc.，上游说明其用途为 AI 辅助设计评审，未提供独立软件许可证；get-web-design 在 README 中声明 MIT，未附独立 LICENSE 文件。本市场保留这些声明，不自行补授许可。浏览器能力按宿主实际工具与规则使用，本次不自动注册额外 MCP 服务。

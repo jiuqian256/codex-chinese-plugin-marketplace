@@ -35,3 +35,9 @@
 ## v1.03 新增内容
 
 山泽 C4D 插件开发标准由本市场维护者在本机创作，根据自有插件库 README 和校验实现整理；本次分享技能说明、入口模板和预检脚本，不分发目标公司的插件库服务端或发布数据。来源与适配记录见该技能 UPSTREAM.json，未为其另行指定统一许可。原有第三方技能、许可与声明保持不变。
+
+## v1.0.4 新增内容
+
+- apple-design：来自 <https://github.com/dickwu/apple-design-skill>，固定提交 `ff4ebddf0488598723a82bfdce1afb04de0b1c44`。保留上游 README 的 Origin and license 声明、作者赞助链接及参考文档内的 Apple 来源链接。Apple HIG 文本归 Apple Inc.；上游未附独立软件许可证，本市场记录 license 为 null，不重新授权这些内容。
+- get-web-design：来自 <https://github.com/liaocaoxuezhe/get-web-design>，固定提交 `abc816f54338b7abe531982ccceb6e56c0a56686`。上游 README 的 License 段声明 MIT，未提供独立 LICENSE 文本；原 README、采集脚本、证据处理脚本、提示词和参考资料完整保留，不自行生成许可文本。
+- 本市场仅增加中文入口说明、agents/openai.yaml 和 UPSTREAM.json；上游实际脚本和参考资源保持原样。不携带账户凭据，也不自动运行远程安装器或刷新上游参考文档。
