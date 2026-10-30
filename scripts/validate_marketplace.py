@@ -20,12 +20,12 @@ def validate(root=ROOT):
     assert plugin.is_relative_to(root) and plugin.is_dir()
     manifest = json.loads((plugin / '.codex-plugin/plugin.json').read_text(encoding='utf-8'))
     assert manifest['name'] == entry['name'] == 'chinese-skills'
-    assert manifest['version'] == catalog['version'] == '1.0.3' and manifest['skills'] == './skills/'
-    assert catalog['release_tag'] == 'v1.03'
+    assert manifest['version'] == catalog['version'] == '1.0.4' and manifest['skills'] == './skills/'
+    assert catalog['release_tag'] == 'v1.0.4'
     assert re.search(r'[\u4e00-\u9fff]', manifest['interface']['displayName'])
     names = {s['name'] for s in catalog['skills']}
     skills = plugin / 'skills'
-    assert catalog['skill_count'] == len(names) == len(catalog['skills']) == 50
+    assert catalog['skill_count'] == len(names) == len(catalog['skills']) == 52
     assert names == {p.name for p in skills.iterdir() if p.is_dir()}
     for name in names:
         folder = skills / name
@@ -85,6 +85,32 @@ def validate(root=ROOT):
     assert 'non-commercial' in (skills / 'gorden-ppt-skill/NOTICE.md').read_text(encoding='utf-8').lower()
     for name in ('create-slide', 'create-theme', 'current-slide', 'apply-comments', 'slide-authoring'):
         assert (skills / 'open-slide/references/upstream' / (name + '.md')).is_file()
+    additions = {
+        'apple-design': ('dickwu/apple-design-skill', 'ff4ebddf0488598723a82bfdce1afb04de0b1c44'),
+        'get-web-design': ('liaocaoxuezhe/get-web-design', 'abc816f54338b7abe531982ccceb6e56c0a56686'),
+    }
+    for name, (repository, commit) in additions.items():
+        folder = skills / name
+        provenance = json.loads((folder / 'UPSTREAM.json').read_text(encoding='utf-8'))
+        item = next(s for s in catalog['skills'] if s['name'] == name)
+        assert provenance['name'] == name
+        assert provenance['repository'] == item['repository'] == repository
+        assert provenance['commit'] == item['commit'] == commit
+        assert provenance['upstream_skill_sha256'] == item['source_skill_sha256']
+        assert re.fullmatch(r'[a-f0-9]{64}', item['source_skill_sha256'])
+        assert (folder / 'README.md').is_file()
+    apple = skills / 'apple-design'
+    assert len(list((apple / 'references/hig').glob('*.md'))) == 124
+    for resource in ('references/hig-lookup.md', 'references/cross-platform.md',
+                     'references/code-audit.md', 'scripts/pull-hig.mjs'):
+        assert (apple / resource).is_file(), resource
+    web = skills / 'get-web-design'
+    assert '## License\n\nMIT' in (web / 'README.md').read_text(encoding='utf-8')
+    for resource in ('assets/collect_design_data.js', 'assets/system_prompt_zh.txt',
+                     'assets/system_prompt_en.txt', 'assets/design_thinking.md', 'assets/core_principles.md',
+                     'scripts/generate_design_md.py', 'scripts/design_document.py', 'scripts/css_evidence.py',
+                     'references/setup.md', 'references/workflow.md', 'references/chrome_devtools_recipes.md'):
+        assert (web / resource).is_file(), resource
     return {'status': 'PASS', 'plugins': 1, 'skills': len(names), 'galaxy_components': 3802,
             'portable_paths': True, 'credential_shape_scan': 'PASS'}
 
